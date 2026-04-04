@@ -10,15 +10,15 @@ export default function Slide01() {
       slideNumber={1}
       slideNumberColor="#e85d3a"
     >
-      <div className="w-full h-full flex flex-col" style={{ padding: "40px 52px 36px 52px" }}>
-        {/* Top Bar */}
-        <div className="flex items-baseline gap-6" style={{ marginBottom: "8px" }}>
+      <div className="w-full h-full relative" style={{ padding: "2.5vh 3.5vw 2.5vh 3.5vw" }}>
+        {/* ===== TOP BAR ===== */}
+        <div className="flex items-baseline gap-6">
           <span
             style={{
               fontFamily: "var(--font-general)",
-              fontSize: "14px",
-              fontWeight: 400,
-              color: "rgba(255,255,255,0.45)",
+              fontSize: "clamp(11px, 1.1vw, 16px)",
+              fontWeight: 500,
+              color: "rgba(255,255,255,0.4)",
               letterSpacing: "0.3px",
             }}
           >
@@ -28,7 +28,7 @@ export default function Slide01() {
             style={{
               fontFamily: "var(--font-playfair)",
               fontStyle: "italic",
-              fontSize: "20px",
+              fontSize: "clamp(16px, 1.7vw, 24px)",
               color: "rgba(255,255,255,0.6)",
             }}
           >
@@ -36,139 +36,167 @@ export default function Slide01() {
           </span>
         </div>
 
-        {/* Giant Headline */}
-        <div style={{ flex: "1", display: "flex", flexDirection: "column", justifyContent: "center", marginTop: "-20px" }}>
-          <h1
-            style={{
-              fontFamily: "var(--font-clash)",
-              fontWeight: 700,
-              fontSize: "clamp(60px, 8.5vw, 130px)",
-              lineHeight: 0.92,
-              letterSpacing: "-3px",
-              color: "#f5f0e8",
-            }}
-          >
-            Concrete<br />
-            Architecture<br />
-            Evaluation:<br />
-            <span style={{ color: "#f0a0b0" }}>KNIME</span><br />
-            <span style={{ color: "#f0a0b0" }}>Workbench.</span>
-          </h1>
+        {/* ===== GIANT HEADLINE ===== */}
+        <h1
+          style={{
+            fontFamily: "var(--font-clash)",
+            fontWeight: 700,
+            fontSize: "clamp(40px, 5.8vw, 100px)",
+            lineHeight: 0.92,
+            letterSpacing: "-0.03em",
+            color: "#f5f0e8",
+            marginTop: "1vh",
+            maxWidth: "68%",
+          }}
+        >
+          Concrete<br />
+          Architecture<br />
+          Evaluation:<br />
+          <span style={{ color: "#f0a0b0" }}>KNIME<br />Workbench.</span>
+        </h1>
 
-          {/* Asterisk */}
-          <div
-            className="absolute"
-            style={{
-              top: "80px",
-              right: "100px",
-              fontSize: "52px",
-              color: "#c8a832",
-              lineHeight: 1,
-            }}
-          >
-            &#10038;
-          </div>
-
-          {/* Right side description */}
-          <div
-            className="absolute"
-            style={{
-              top: "160px",
-              right: "40px",
-              maxWidth: "220px",
-              fontFamily: "var(--font-general)",
-              fontSize: "13px",
-              lineHeight: 1.5,
-              color: "rgba(255,255,255,0.5)",
-              textAlign: "right",
-            }}
-          >
-            Analysis of Maintainability<br />
-            via C&K and LOC Metrics<br />
-            (T1 Report)
-          </div>
+        {/* ===== GOLD ASTERISK ===== */}
+        <div
+          style={{
+            position: "absolute",
+            top: "7vh",
+            right: "14vw",
+            fontSize: "clamp(32px, 3.5vw, 56px)",
+            color: "#c8a832",
+            lineHeight: 1,
+            zIndex: 5,
+          }}
+        >
+          &#10038;
         </div>
 
-        {/* Bottom Section — Stat Cards */}
-        <div className="flex gap-3 items-end" style={{ marginTop: "auto" }}>
-          {/* Big stat card */}
+        {/* ===== RIGHT SIDE BODY TEXT ===== */}
+        <div
+          style={{
+            position: "absolute",
+            top: "12vh",
+            right: "3.5vw",
+            maxWidth: "18vw",
+            fontFamily: "var(--font-general)",
+            fontSize: "clamp(11px, 1.1vw, 16px)",
+            fontWeight: 500,
+            lineHeight: 1.45,
+            color: "rgba(255,255,255,0.5)",
+            textAlign: "left",
+            zIndex: 5,
+          }}
+        >
+          Analysis of Maintainability<br />
+          via C&K and LOC Metrics<br />
+          (T1 Report)
+        </div>
+
+        {/* ===== BOTTOM CARDS — ROW 1: Teal stat + Cream card ===== */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "8vh",
+            left: "3.5vw",
+            right: "3.5vw",
+            display: "flex",
+            gap: "1vw",
+            zIndex: 5,
+          }}
+        >
+          {/* Large teal stat card */}
           <div
             style={{
-              backgroundColor: "rgba(245,240,232,0.12)",
-              borderRadius: "14px",
-              padding: "24px 36px",
+              flex: "1 1 60%",
+              backgroundColor: "rgba(245,240,232,0.1)",
+              borderRadius: "clamp(10px, 1.2vw, 18px)",
+              padding: "2vh 2.5vw",
               display: "flex",
-              alignItems: "baseline",
-              gap: "20px",
+              alignItems: "center",
+              gap: "2vw",
             }}
           >
-            <span
-              style={{
-                fontFamily: "var(--font-clash)",
-                fontWeight: 700,
-                fontSize: "62px",
-                color: "#f0a0b0",
-                lineHeight: 1,
-                letterSpacing: "-2px",
-              }}
-            >
-              97.66
-            </span>
-            <div>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "0.3vw" }}>
               <span
                 style={{
                   fontFamily: "var(--font-clash)",
-                  fontWeight: 600,
-                  fontSize: "28px",
-                  color: "#f0a0b0",
+                  fontWeight: 700,
+                  fontSize: "clamp(36px, 4.5vw, 72px)",
+                  color: "#f5f0e8",
+                  lineHeight: 1,
+                  letterSpacing: "-0.03em",
+                }}
+              >
+                97.66
+              </span>
+              <span
+                style={{
+                  fontFamily: "var(--font-clash)",
+                  fontWeight: 700,
+                  fontSize: "clamp(22px, 2.8vw, 44px)",
+                  color: "#f5f0e8",
                   lineHeight: 1,
                 }}
               >
                 KLOC
               </span>
-              <div
+            </div>
+            <div>
+              <p
                 style={{
-                  fontFamily: "var(--font-general)",
-                  fontSize: "14px",
+                  fontFamily: "var(--font-clash)",
                   fontWeight: 600,
-                  color: "rgba(255,255,255,0.6)",
-                  marginTop: "4px",
+                  fontSize: "clamp(12px, 1.15vw, 16px)",
+                  color: "rgba(255,255,255,0.7)",
+                  lineHeight: 1.35,
                 }}
               >
-                across 672 classes
-              </div>
-              <div
+                Total codebase<br />
+                analyzed across<br />
+                672 classes
+              </p>
+              <p
                 style={{
-                  fontFamily: "var(--font-general)",
-                  fontSize: "12px",
+                  fontFamily: "var(--font-clash)",
+                  fontWeight: 700,
+                  fontSize: "clamp(11px, 1vw, 15px)",
                   color: "#c8a832",
-                  marginTop: "2px",
+                  marginTop: "0.3vh",
                 }}
               >
                 Java (Eclipse RCP)
-              </div>
+              </p>
             </div>
           </div>
 
-          {/* Small cream card */}
+          {/* Cream info card */}
           <div
             style={{
+              flex: "0 0 clamp(160px, 18vw, 260px)",
               backgroundColor: "#f5f0e8",
-              borderRadius: "14px",
-              padding: "20px 24px",
-              maxWidth: "240px",
+              borderRadius: "clamp(10px, 1.2vw, 18px)",
+              padding: "1.8vh 1.5vw",
+              position: "relative",
             }}
           >
-            <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "8px" }}>
-              <span style={{ fontSize: "22px", color: "#e85d3a" }}>&#8599;</span>
+            <div
+              style={{
+                position: "absolute",
+                top: "1.2vh",
+                right: "1vw",
+                fontSize: "clamp(18px, 1.8vw, 28px)",
+                color: "#e85d3a",
+              }}
+            >
+              &#8599;
             </div>
             <p
               style={{
                 fontFamily: "var(--font-clash)",
-                fontWeight: 600,
-                fontSize: "18px",
-                lineHeight: 1.25,
+                fontWeight: 700,
+                fontSize: "clamp(13px, 1.3vw, 20px)",
+                lineHeight: 1.3,
                 color: "#1a535c",
+                marginTop: "2vh",
               }}
             >
               C&K Metrics<br />
@@ -177,127 +205,133 @@ export default function Slide01() {
               & Technical Debt.
             </p>
           </div>
+        </div>
 
-          {/* Bottom pink card */}
-          <div
-            className="absolute"
+        {/* ===== BOTTOM ROW 2: Pink card + italic text + circles ===== */}
+        {/* Pink stat badge */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "2vh",
+            left: "3.5vw",
+            backgroundColor: "#f0a0b0",
+            borderRadius: "clamp(10px, 1.2vw, 18px)",
+            padding: "1.2vh 2vw",
+            display: "flex",
+            alignItems: "center",
+            gap: "1.2vw",
+            zIndex: 5,
+          }}
+        >
+          <span
             style={{
-              bottom: "36px",
-              left: "52px",
+              fontFamily: "var(--font-clash)",
+              fontWeight: 700,
+              fontSize: "clamp(26px, 3vw, 44px)",
+              color: "#f5f0e8",
+              letterSpacing: "-0.02em",
+              lineHeight: 1,
+            }}
+          >
+            672
+          </span>
+          <span
+            style={{
+              fontFamily: "var(--font-general)",
+              fontWeight: 600,
+              fontSize: "clamp(11px, 1.05vw, 15px)",
+              color: "rgba(255,255,255,0.85)",
+              lineHeight: 1.3,
+            }}
+          >
+            Classes analyzed<br />
+            for architecture quality.
+          </span>
+        </div>
+
+        {/* Bottom italic text */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "2vh",
+            left: "36vw",
+            fontFamily: "var(--font-playfair)",
+            fontStyle: "italic",
+            fontSize: "clamp(10px, 0.95vw, 14px)",
+            color: "rgba(255,255,255,0.35)",
+            lineHeight: 1.55,
+            maxWidth: "24vw",
+            zIndex: 5,
+          }}
+        >
+          Evaluating the concrete architecture of<br />
+          KNIME Workbench through static analysis,<br />
+          identifying structural weaknesses<br />
+          and technical debt hotspots.
+        </div>
+
+        {/* ===== TEAM CIRCLES ===== */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "2.5vh",
+            right: "3.5vw",
+            display: "flex",
+            gap: "0.4vw",
+            zIndex: 5,
+          }}
+        >
+          <div
+            style={{
+              width: "clamp(28px, 2.8vw, 42px)",
+              height: "clamp(28px, 2.8vw, 42px)",
+              borderRadius: "50%",
               backgroundColor: "#f0a0b0",
-              borderRadius: "14px",
-              padding: "16px 28px",
               display: "flex",
               alignItems: "center",
-              gap: "16px",
+              justifyContent: "center",
+              fontFamily: "var(--font-clash)",
+              fontWeight: 700,
+              fontSize: "clamp(11px, 1.1vw, 16px)",
+              color: "#f5f0e8",
             }}
           >
-            <span
-              style={{
-                fontFamily: "var(--font-clash)",
-                fontWeight: 700,
-                fontSize: "36px",
-                color: "#f5f0e8",
-                letterSpacing: "-1px",
-              }}
-            >
-              672
-            </span>
-            <span
-              style={{
-                fontFamily: "var(--font-general)",
-                fontWeight: 600,
-                fontSize: "14px",
-                color: "rgba(255,255,255,0.8)",
-                lineHeight: 1.3,
-              }}
-            >
-              Classes analyzed<br />
-              for architecture quality.
-            </span>
+            M
           </div>
-
-          {/* Bottom right text */}
           <div
-            className="absolute"
             style={{
-              bottom: "36px",
-              right: "200px",
-              fontFamily: "var(--font-general)",
-              fontSize: "12px",
-              color: "rgba(255,255,255,0.35)",
-              lineHeight: 1.5,
-              maxWidth: "280px",
-            }}
-          >
-            Evaluating the concrete architecture of<br />
-            KNIME Workbench through static analysis,<br />
-            identifying structural weaknesses<br />
-            and technical debt hotspots.
-          </div>
-
-          {/* Team initials */}
-          <div
-            className="absolute"
-            style={{
-              bottom: "36px",
-              right: "52px",
+              width: "clamp(28px, 2.8vw, 42px)",
+              height: "clamp(28px, 2.8vw, 42px)",
+              borderRadius: "50%",
+              backgroundColor: "#1a535c",
+              border: "2px solid rgba(255,255,255,0.15)",
               display: "flex",
-              gap: "6px",
+              alignItems: "center",
+              justifyContent: "center",
+              fontFamily: "var(--font-clash)",
+              fontWeight: 700,
+              fontSize: "clamp(11px, 1.1vw, 16px)",
+              color: "#f5f0e8",
             }}
           >
-            <div
-              style={{
-                width: "34px",
-                height: "34px",
-                borderRadius: "50%",
-                backgroundColor: "#1a535c",
-                border: "2px solid rgba(255,255,255,0.15)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontFamily: "var(--font-clash)",
-                fontWeight: 700,
-                fontSize: "13px",
-                color: "#f5f0e8",
-              }}
-            >
-              M
-            </div>
-            <div
-              style={{
-                width: "34px",
-                height: "34px",
-                borderRadius: "50%",
-                backgroundColor: "#f0a0b0",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontFamily: "var(--font-clash)",
-                fontWeight: 700,
-                fontSize: "13px",
-                color: "#f5f0e8",
-              }}
-            >
-              T
-            </div>
-            <div
-              style={{
-                width: "34px",
-                height: "34px",
-                borderRadius: "50%",
-                backgroundColor: "#c8a832",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontFamily: "var(--font-clash)",
-                fontWeight: 700,
-                fontSize: "13px",
-                color: "#1a535c",
-              }}
-            >
-              S
-            </div>
+            T
+          </div>
+          <div
+            style={{
+              width: "clamp(28px, 2.8vw, 42px)",
+              height: "clamp(28px, 2.8vw, 42px)",
+              borderRadius: "50%",
+              backgroundColor: "#c8a832",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontFamily: "var(--font-clash)",
+              fontWeight: 700,
+              fontSize: "clamp(11px, 1.1vw, 16px)",
+              color: "#1a535c",
+            }}
+          >
+            S
           </div>
         </div>
       </div>
