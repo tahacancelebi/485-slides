@@ -1,0 +1,203 @@
+import React from 'react';
+
+export default function MarketOpportunitySlide() {
+  const noiseStyle = {
+    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+  };
+
+  const dotsStyle = {
+    backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px)`,
+    backgroundSize: '22px 22px',
+  };
+
+  return (
+    <div className="w-full min-h-screen relative overflow-hidden text-[#f0ecdb] font-sans bg-[#176E71] flex flex-col">
+      {/* 1. GLOBAL TEXTURE LAYER */}
+      <div
+        className="absolute inset-0 z-50 pointer-events-none opacity-30 mix-blend-multiply"
+        style={noiseStyle}
+      />
+
+      {/* 2. BACKGROUND SPLIT */}
+      <div className="absolute inset-0 flex flex-col z-0">
+        <div className="h-[65%] w-full bg-[#176E71]" />
+        <div className="h-[35%] w-full bg-[#0F3D43]" style={dotsStyle} />
+      </div>
+
+      {/* 3. CONTENT WRAPPER */}
+      <div className="relative z-10 w-full h-full min-h-screen flex flex-col px-10 py-10 md:px-16 md:py-12">
+        {/* Üst Menü / Etiketler */}
+        <div className="flex justify-between items-start tracking-wide">
+          <div className="flex items-center space-x-8">
+            <span className="text-[#F5D95C] font-semibold text-lg">
+              Disqet Design
+            </span>
+            <span className="font-serif italic text-3xl tracking-wide">
+              Market Opportunity
+            </span>
+          </div>
+          <span className="text-[#F27A8A] font-bold text-2xl tracking-wider">
+            /(01-D1*)
+          </span>
+        </div>
+
+        {/* Ana Başlık ve Sağ Üst İkon */}
+        <div className="mt-8 relative w-full flex justify-between items-start">
+          <h1 className="text-[6.5vw] font-bold leading-[0.85] tracking-tighter w-[75%] transform scale-y-[1.15] origin-top-left">
+            The Global Digital
+            <br />
+            Marketing Market is
+            <br />
+            <span className="text-[#F27A8A]">Growing Rapidly.</span>
+          </h1>
+
+          <div className="flex flex-col items-end text-right w-[25%] pt-4">
+            <svg
+              className="w-16 h-16 text-[#F5D95C] mb-8"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <rect x="10.5" y="1" width="3" height="22" rx="1.5" />
+              <rect
+                x="10.5"
+                y="1"
+                width="3"
+                height="22"
+                rx="1.5"
+                transform="rotate(45 12 12)"
+              />
+              <rect
+                x="10.5"
+                y="1"
+                width="3"
+                height="22"
+                rx="1.5"
+                transform="rotate(90 12 12)"
+              />
+              <rect
+                x="10.5"
+                y="1"
+                width="3"
+                height="22"
+                rx="1.5"
+                transform="rotate(135 12 12)"
+              />
+            </svg>
+            <p className="text-sm md:text-base leading-snug text-white/90 font-medium">
+              Unprecedented Growth
+              <br />
+              Driving New Opportunities
+              <br />
+              For Brands Worldwide.
+            </p>
+          </div>
+        </div>
+
+        {/* KARTLAR BÖLÜMÜ */}
+        <div className=" w-full flex flex-col gap-6 pb-4 mt-24">
+          {/* --- 1. SATIR: Turkuaz ve Krem Kartlar (Yapışık ve Daha Kısa) --- */}
+          {/* gap-0 ile kartlar birbirine yapıştırıldı */}
+          <div className="flex flex-row items-stretch gap-0 w-full">
+            {/* Turkuaz Büyük Kart (Sol) */}
+            {/* py-8 px-10 yapılarak yükseklik azaltıldı */}
+            <div className="bg-[#229297] rounded-[2rem] py-8 px-10 flex items-center justify-between shadow-2xl relative overflow-hidden flex-[2.7]">
+              <div
+                className="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none"
+                style={noiseStyle}
+              />
+
+              {/* Font boyutu text-[7.5vw]'den text-[6.5vw]'ye küçültüldü */}
+              <div className="text-[6.5vw] font-bold tracking-tighter leading-none">
+                $786.2B<span className="text-[#F27A8A]">+</span>
+              </div>
+              <div className="text-[1.6rem] md:text-[2rem] font-bold max-w-[280px] leading-[1.1]">
+                Global digital
+                <br />
+                marketing spend
+                <br />
+                is projected
+                <br />
+                <span className="text-[#F5D95C] text-base mt-2 block font-bold">
+                  By 2026 (Statista)
+                </span>
+              </div>
+            </div>
+
+            {/* Krem Kart (Sağ) */}
+            {/* py-8 px-10 yapılarak turkuaz ile uyumlu şekilde küçültüldü */}
+            <div className="bg-[#F4EFE2] rounded-[2rem] py-6 px-10 text-[#176E71] shadow-2xl relative overflow-hidden flex flex-col justify-between flex-[1.3]">
+              <div
+                className="absolute inset-0 opacity-[0.08] mix-blend-multiply pointer-events-none"
+                style={noiseStyle}
+              />
+
+              <div className="flex justify-end text-[#F27A8A]">
+                <svg
+                  className="w-9 h-9"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                  />
+                </svg>
+              </div>
+
+              {/* Font boyutu text-[2.6rem]'den text-[2.2rem]'e çekildi */}
+              <div className="text-[1.9rem] md:text-[2.2rem] font-medium leading-[1.15] tracking-tight mt-auto">
+                63% of
+                <br />
+                businesses
+                <br />
+                increased their
+                <br />
+                digital marketing
+                <br />
+                budgets in 2024.
+              </div>
+            </div>
+          </div>
+
+          {/* --- 2. SATIR: Pembe Kart, Açıklama ve Logolar --- */}
+          <div className="flex flex-row items-center gap-8 w-full mt-2">
+            <div className="bg-[#F27A8A] rounded-[1.8rem] py-5 px-8 flex items-center gap-6 shadow-xl relative overflow-hidden w-max">
+              <div
+                className="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none"
+                style={noiseStyle}
+              />
+              <div className="text-[3.2rem] font-bold tracking-tight">
+                11.5%
+              </div>
+              <div className="text-[1.1rem] font-medium leading-tight text-white/95">
+                Social media ad spending
+                <br />
+                is expected to grow.
+              </div>
+            </div>
+
+            <div className="text-[1.05rem] leading-snug text-white/80 max-w-[480px] font-medium">
+              The Digital Marketing Landscape Is Expanding Faster
+              <br />
+              Than Ever, Driven By The Global Shift Toward Online
+              <br />
+              Engagement And Data-Driven Strategies.
+            </div>
+
+            <div className="ml-auto flex gap-3 pr-2">
+              <div className="w-14 h-14 rounded-full bg-[#F27A8A] flex items-center justify-center font-bold text-2xl shadow-xl">
+                M
+              </div>
+              <div className="-ms-4 w-14 h-14 rounded-full bg-[#229297] flex items-center justify-center font-bold text-2xl shadow-xl">
+                E
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
