@@ -12,26 +12,26 @@ export default function GQMSlide() {
   };
 
   return (
-    <div className="w-screen h-screen bg-[#0B1A3A] relative overflow-hidden font-sans text-[#F4EFE2]">
+    <div className="w-[100cqw] h-[100cqh] bg-[#0B1A3A] relative overflow-hidden font-sans text-[#F4EFE2]">
       {/* Giant ghost watermark */}
-      <div className="absolute top-[8vh] right-[4vw] text-[52vh] font-black leading-none tracking-tighter text-[#F4EFE2]/[0.03] z-0 select-none">
+      <div className="absolute top-[8cqh] right-[4cqw] text-[52cqh] font-black leading-none tracking-tighter text-[#F4EFE2]/[0.03] z-0 select-none">
         GQM
       </div>
 
       {/* === TOP BAR === */}
-      <div className="absolute top-[5vh] left-[4vw] font-serif italic text-[#E8B83D] text-[3vh] tracking-wide z-20">
+      <div className="absolute top-[5cqh] left-[4cqw] font-serif italic text-[#E8B83D] text-[3cqh] tracking-wide z-20">
         Methodology
       </div>
-      <div className="absolute top-[5.5vh] left-[28vw] text-[#E8B83D] font-medium text-[1.8vh] tracking-wide z-20">
+      <div className="absolute top-[5.5cqh] left-[28cqw] text-[#E8B83D] font-medium text-[1.8cqh] tracking-wide z-20">
         BBM485 · T2
       </div>
-      <div className="absolute top-[5vh] right-[4vw] text-[#E65C41] font-bold text-[2.2vh] tracking-widest z-20">
+      <div className="absolute top-[5cqh] right-[4cqw] text-[#E65C41] font-bold text-[2.2cqh] tracking-widest z-20">
         /(03-D1*)
       </div>
 
       {/* Main heading */}
-      <div className="absolute top-[13vh] left-[4vw] z-20">
-        <h1 className="text-[9vh] font-black leading-[0.82] tracking-tighter">
+      <div className="absolute top-[13cqh] left-[4cqw] z-20">
+        <h1 className="text-[9cqh] font-black leading-[0.82] tracking-tighter">
           Goal · Question
           <br />
           <span className="text-[#E8B83D]">Metric Tree.</span>
@@ -39,27 +39,27 @@ export default function GQMSlide() {
       </div>
 
       {/* Asterisk */}
-      <div className="absolute top-[13vh] right-[20vw] z-20 leading-none text-[#E8B83D]">
-        <DecorativeAsterisk className="w-[7vh] h-[7vh]" />
+      <div className="absolute top-[13cqh] right-[20cqw] z-20 leading-none text-[#E8B83D]">
+        <DecorativeAsterisk className="w-[7cqh] h-[7cqh]" />
       </div>
 
       {/* === ZIGZAG STACKED BARS === */}
-      <div className="absolute top-[35vh] left-0 right-0 flex flex-col gap-[1.8vh] px-[3vw] z-20">
+      <div className="absolute top-[35cqh] left-0 right-0 flex flex-col gap-[1.8cqh] px-[3cqw] z-20">
         {/* Bar 1 — Coral — Left */}
-        <div className="relative rounded-[2.5vh] py-[2.8vh] px-[4vw] flex items-center justify-between overflow-hidden shadow-xl mr-auto w-[90%] bg-[#E65C41]">
+        <div className="relative rounded-[2.5cqh] py-[2.8cqh] px-[4cqw] flex items-center justify-between overflow-hidden shadow-xl mr-auto w-[90%] bg-[#E65C41]">
           <div
             className="absolute inset-0 opacity-[0.3] mix-blend-multiply pointer-events-none"
             style={noiseStyle}
           />
-          <div className="relative z-10 flex items-center gap-[3vw]">
-            <span className="text-[5.5vh] font-black leading-none tracking-tighter opacity-90">
+          <div className="relative z-10 flex items-center gap-[3cqw]">
+            <span className="text-[5.5cqh] font-black leading-none tracking-tighter opacity-90">
               Q1
             </span>
             <div>
-              <span className="text-[2.8vh] font-black leading-none tracking-tight">
+              <span className="text-[2.8cqh] font-black leading-none tracking-tight">
                 Size · LOC
               </span>
-              <span className="text-[1.5vh] font-medium ml-[1.5vw] text-[#F4EFE2]/85 tracking-wide">
+              <span className="text-[1.5cqh] font-medium ml-[1.5cqw] text-[#F4EFE2]/85 tracking-wide">
                 Lines of Code per class — baseline for any maintainability question
               </span>
             </div>
@@ -68,20 +68,20 @@ export default function GQMSlide() {
         </div>
 
         {/* Bar 2 — Blue — Right */}
-        <div className="relative rounded-[2.5vh] py-[2.8vh] px-[4vw] flex items-center justify-between overflow-hidden shadow-xl ml-auto w-[84%] bg-[#2A7DE1]">
+        <div className="relative rounded-[2.5cqh] py-[2.8cqh] px-[4cqw] flex items-center justify-between overflow-hidden shadow-xl ml-auto w-[84%] bg-[#2A7DE1]">
           <div
             className="absolute inset-0 opacity-[0.3] mix-blend-multiply pointer-events-none"
             style={noiseStyle}
           />
-          <div className="relative z-10 flex items-center gap-[3vw]">
-            <span className="text-[5.5vh] font-black leading-none tracking-tighter opacity-90">
+          <div className="relative z-10 flex items-center gap-[3cqw]">
+            <span className="text-[5.5cqh] font-black leading-none tracking-tighter opacity-90">
               Q2
             </span>
             <div>
-              <span className="text-[2.8vh] font-black leading-none tracking-tight">
+              <span className="text-[2.8cqh] font-black leading-none tracking-tight">
                 Coupling · CBO
               </span>
-              <span className="text-[1.5vh] font-medium ml-[1.5vw] text-[#F4EFE2]/85 tracking-wide">
+              <span className="text-[1.5cqh] font-medium ml-[1.5cqw] text-[#F4EFE2]/85 tracking-wide">
                 How many classes depend on each other — measures fragility and ripple risk
               </span>
             </div>
@@ -90,20 +90,20 @@ export default function GQMSlide() {
         </div>
 
         {/* Bar 3 — Gold — Left (dark text) */}
-        <div className="relative rounded-[2.5vh] py-[2.8vh] px-[4vw] flex items-center justify-between overflow-hidden shadow-xl mr-auto w-[88%] bg-[#E8B83D]">
+        <div className="relative rounded-[2.5cqh] py-[2.8cqh] px-[4cqw] flex items-center justify-between overflow-hidden shadow-xl mr-auto w-[88%] bg-[#E8B83D]">
           <div
             className="absolute inset-0 opacity-[0.3] mix-blend-multiply pointer-events-none"
             style={noiseStyle}
           />
-          <div className="relative z-10 flex items-center gap-[3vw]">
-            <span className="text-[5.5vh] font-black leading-none tracking-tighter text-[#0B1A3A] opacity-90">
+          <div className="relative z-10 flex items-center gap-[3cqw]">
+            <span className="text-[5.5cqh] font-black leading-none tracking-tighter text-[#0B1A3A] opacity-90">
               Q3
             </span>
             <div>
-              <span className="text-[2.8vh] font-black leading-none tracking-tight text-[#0B1A3A]">
+              <span className="text-[2.8cqh] font-black leading-none tracking-tight text-[#0B1A3A]">
                 Complexity · WMC & RFC
               </span>
-              <span className="text-[1.5vh] font-medium ml-[1.5vw] text-[#0B1A3A]/80 tracking-wide">
+              <span className="text-[1.5cqh] font-medium ml-[1.5cqw] text-[#0B1A3A]/80 tracking-wide">
                 Structural and behavioral complexity — testability and bug concentration
               </span>
             </div>
@@ -112,20 +112,20 @@ export default function GQMSlide() {
         </div>
 
         {/* Bar 4 — Emerald — Right */}
-        <div className="relative rounded-[2.5vh] py-[2.8vh] px-[4vw] flex items-center justify-between overflow-hidden shadow-xl ml-auto w-[82%] bg-[#1B8A6B]">
+        <div className="relative rounded-[2.5cqh] py-[2.8cqh] px-[4cqw] flex items-center justify-between overflow-hidden shadow-xl ml-auto w-[82%] bg-[#1B8A6B]">
           <div
             className="absolute inset-0 opacity-[0.3] mix-blend-multiply pointer-events-none"
             style={noiseStyle}
           />
-          <div className="relative z-10 flex items-center gap-[3vw]">
-            <span className="text-[5.5vh] font-black leading-none tracking-tighter opacity-90">
+          <div className="relative z-10 flex items-center gap-[3cqw]">
+            <span className="text-[5.5cqh] font-black leading-none tracking-tighter opacity-90">
               Q4
             </span>
             <div>
-              <span className="text-[2.8vh] font-black leading-none tracking-tight">
+              <span className="text-[2.8cqh] font-black leading-none tracking-tight">
                 Structure · LCOM, DIT, NOC
               </span>
-              <span className="text-[1.5vh] font-medium ml-[1.5vw] text-[#F4EFE2]/85 tracking-wide">
+              <span className="text-[1.5cqh] font-medium ml-[1.5cqw] text-[#F4EFE2]/85 tracking-wide">
                 Cohesion and inheritance — encapsulation and reuse quality
               </span>
             </div>
@@ -135,9 +135,9 @@ export default function GQMSlide() {
       </div>
 
       {/* Bottom description */}
-      <div className="absolute bottom-[3vh] left-[4vw] flex items-start gap-[1.5vw] z-20 w-[40vw]">
-        <div className="w-[3vw] h-[3px] bg-[#E8B83D] mt-[1vh] flex-shrink-0" />
-        <p className="text-[1.6vh] leading-[1.65] text-[#F4EFE2]/80 font-medium tracking-wide">
+      <div className="absolute bottom-[3cqh] left-[4cqw] flex items-start gap-[1.5cqw] z-20 w-[40cqw]">
+        <div className="w-[3cqw] h-[3px] bg-[#E8B83D] mt-[1cqh] flex-shrink-0" />
+        <p className="text-[1.6cqh] leading-[1.65] text-[#F4EFE2]/80 font-medium tracking-wide">
           Our Goal Is Maintainability From An Architect&apos;s
           <br />
           Viewpoint. We Split It Into Four Concrete Questions
@@ -147,11 +147,11 @@ export default function GQMSlide() {
       </div>
 
       {/* Logo circles */}
-      <div className="absolute bottom-[5vh] right-[4vw] flex items-center z-20">
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#E65C41] flex items-center justify-center font-black text-[3.2vh] text-[#F4EFE2] shadow-lg z-10">
+      <div className="absolute bottom-[5cqh] right-[4cqw] flex items-center z-20">
+        <div className="w-[7.5cqh] h-[7.5cqh] rounded-full bg-[#E65C41] flex items-center justify-center font-black text-[3.2cqh] text-[#F4EFE2] shadow-lg z-10">
           G
         </div>
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#2A7DE1] flex items-center justify-center font-black text-[3.2vh] text-[#F4EFE2] shadow-lg -ml-[1.8vh] z-0">
+        <div className="w-[7.5cqh] h-[7.5cqh] rounded-full bg-[#2A7DE1] flex items-center justify-center font-black text-[3.2cqh] text-[#F4EFE2] shadow-lg -ml-[1.8cqh] z-0">
           Q
         </div>
       </div>
@@ -172,7 +172,7 @@ export default function GQMSlide() {
 function ArrowIcon({ dark }: { dark?: boolean }) {
   return (
     <svg
-      className={`relative z-10 w-[3.5vh] h-[3.5vh] flex-shrink-0 ${
+      className={`relative z-10 w-[3.5cqh] h-[3.5cqh] flex-shrink-0 ${
         dark ? 'text-[#0B1A3A]/40' : 'text-[#F4EFE2]/50'
       }`}
       fill="none"

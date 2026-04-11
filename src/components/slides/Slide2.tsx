@@ -12,7 +12,7 @@ export default function LCOMSlide() {
   };
 
   return (
-    <div className="w-full min-h-screen relative overflow-hidden font-sans flex text-[#F4EFE2]">
+    <div className="w-full min-h-[100cqh] relative overflow-hidden font-sans flex text-[#F4EFE2]">
       {/* GLOBAL TEXTURE LAYER */}
       <div
         className="absolute inset-0 z-50 pointer-events-none opacity-[0.25] mix-blend-multiply"
@@ -20,7 +20,7 @@ export default function LCOMSlide() {
       />
 
       {/* --- SOL KOLON (Turuncu Kısım) --- */}
-      <div className="w-[55%] bg-[#E65C41] relative flex flex-col p-10 md:p-14 lg:p-16 pb-[16vh] z-10">
+      <div className="w-[55%] bg-[#E65C41] relative flex flex-col p-10 md:p-14 lg:p-16 pb-[16cqh] z-10">
         {/* Üst Alan: Etiket */}
         <span className="text-white/80 font-medium tracking-wide text-[0.8rem] md:text-sm">
           Q4 · Cohesion Analysis
@@ -54,7 +54,7 @@ export default function LCOMSlide() {
 
         {/* Ana Dev Başlık */}
         <div className="mt-28 w-full">
-          <h1 className="text-[6vw] font-black leading-[0.82] tracking-tighter transform scale-y-[1.1] origin-bottom-left">
+          <h1 className="text-[6cqw] font-black leading-[0.82] tracking-tighter transform scale-y-[1.1] origin-bottom-left">
             <span className="text-[#EAD037]">Methods Share Almost</span>{' '}
             No Data Fields — A Dumping Ground.
           </h1>
@@ -74,7 +74,7 @@ export default function LCOMSlide() {
       </div>
 
       {/* --- SAĞ KOLON (Mavi Kısım) --- */}
-      <div className="w-[45%] flex flex-col relative z-10 h-screen">
+      <div className="w-[45%] flex flex-col relative z-10 h-[100cqh]">
         {/* Sağ Üst Ana Alan (Açık Mavi) */}
         <div className="flex-1 bg-[#323681] relative flex flex-col items-center justify-center p-10 lg:p-14 overflow-hidden">
           <div

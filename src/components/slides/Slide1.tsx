@@ -12,7 +12,7 @@ export default function TitleSlide() {
   };
 
   return (
-    <div className="w-full min-h-screen relative overflow-hidden text-[#f0ecdb] font-sans bg-[#176E71] flex flex-col">
+    <div className="w-full min-h-[100cqh] relative overflow-hidden text-[#f0ecdb] font-sans bg-[#176E71] flex flex-col">
       {/* 1. GLOBAL TEXTURE LAYER */}
       <div
         className="absolute inset-0 z-50 pointer-events-none opacity-30 mix-blend-multiply"
@@ -26,7 +26,7 @@ export default function TitleSlide() {
       </div>
 
       {/* 3. CONTENT WRAPPER */}
-      <div className="relative z-10 w-full h-full min-h-screen flex flex-col px-10 py-10 md:px-16 md:py-12">
+      <div className="relative z-10 w-full h-full min-h-[100cqh] flex flex-col px-10 py-10 md:px-16 md:py-12">
         {/* Üst Menü / Etiketler */}
         <div className="flex justify-between items-start tracking-wide">
           <div className="flex items-center space-x-8">
@@ -44,7 +44,7 @@ export default function TitleSlide() {
 
         {/* Ana Başlık ve Sağ Üst İkon */}
         <div className="mt-14 relative w-full flex justify-between items-start">
-          <h1 className="text-[7.5vw] font-black leading-[0.85] tracking-tighter w-[75%] transform scale-y-[1.15] origin-top-left">
+          <h1 className="text-[7.5cqw] font-black leading-[0.85] tracking-tighter w-[75%] transform scale-y-[1.15] origin-top-left">
             KNIME Workbench
             <br />
             Architecture
@@ -75,7 +75,7 @@ export default function TitleSlide() {
                 style={noiseStyle}
               />
 
-              <div className="text-[6.5vw] font-bold tracking-tighter leading-none">
+              <div className="text-[6.5cqw] font-bold tracking-tighter leading-none">
                 100<span className="text-[#F27A8A]">K</span>
               </div>
               <div className="text-[1.6rem] md:text-[2rem] font-bold max-w-[280px] leading-[1.1]">

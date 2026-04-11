@@ -11,39 +11,39 @@ export default function CyclicDependencySlide() {
   };
 
   return (
-    <div className="w-screen h-screen bg-[#2E1610] relative overflow-hidden font-sans text-[#F4EFE2]">
+    <div className="w-[100cqw] h-[100cqh] bg-[#2E1610] relative overflow-hidden font-sans text-[#F4EFE2]">
       {/* Ghost watermark 0 — bottom left */}
-      <div className="absolute -bottom-[22vh] -left-[2vw] text-[90vh] font-black leading-none tracking-tighter text-[#F4EFE2]/[0.025] z-0 select-none">
+      <div className="absolute -bottom-[22cqh] -left-[2cqw] text-[90cqh] font-black leading-none tracking-tighter text-[#F4EFE2]/[0.025] z-0 select-none">
         0
       </div>
 
       {/* === TOP BAR === */}
-      <div className="absolute top-[5vh] left-[4vw] font-serif italic text-[#E8B83D] text-[3vh] tracking-wide z-20">
+      <div className="absolute top-[5cqh] left-[4cqw] font-serif italic text-[#E8B83D] text-[3cqh] tracking-wide z-20">
         Architectural Smell
       </div>
-      <div className="absolute top-[5.5vh] left-[30vw] text-[#E65C41] font-medium text-[1.8vh] tracking-wide z-20">
+      <div className="absolute top-[5.5cqh] left-[30cqw] text-[#E65C41] font-medium text-[1.8cqh] tracking-wide z-20">
         BBM485 · T1
       </div>
-      <div className="absolute top-[5vh] right-[4vw] text-[#E8B83D] font-bold text-[2.2vh] tracking-widest z-20">
+      <div className="absolute top-[5cqh] right-[4cqw] text-[#E8B83D] font-bold text-[2.2cqh] tracking-widest z-20">
         /(14-T1*)
       </div>
 
       {/* === MAIN HEADING — Upper left === */}
-      <div className="absolute top-[14vh] left-[4vw] z-20 w-[44vw]">
-        <h1 className="text-[10.5vh] font-black leading-[0.8] tracking-tighter">
+      <div className="absolute top-[14cqh] left-[4cqw] z-20 w-[44cqw]">
+        <h1 className="text-[10.5cqh] font-black leading-[0.8] tracking-tighter">
           Cyclic
           <br />
           Dependency
           <br />
           <span className="text-[#E8B83D]">Red Flag.</span>
         </h1>
-        <p className="text-[1.5vh] font-bold text-[#F4EFE2]/50 tracking-[0.28em] uppercase mt-[2.5vh]">
+        <p className="text-[1.5cqh] font-bold text-[#F4EFE2]/50 tracking-[0.28em] uppercase mt-[2.5cqh]">
           editor ⇄ ui.layout · Package Cycle
         </p>
       </div>
 
       {/* === SVG CYCLE DIAGRAM — right side, flat matte === */}
-      <div className="absolute top-[15vh] right-[2vw] z-20 w-[50vw] h-[56vh]">
+      <div className="absolute top-[15cqh] right-[2cqw] z-20 w-[50cqw] h-[56cqh]">
         <svg
           viewBox="0 0 560 460"
           className="w-full h-full"
@@ -216,30 +216,30 @@ export default function CyclicDependencySlide() {
       </div>
 
       {/* === ZERO BUILDS CALLOUT === */}
-      <div className="absolute bottom-[22vh] left-[4vw] z-20 flex items-center gap-[2vh]">
-        <span className="text-[#E65C41] text-[13vh] font-black leading-none tracking-tighter">
+      <div className="absolute bottom-[22cqh] left-[4cqw] z-20 flex items-center gap-[2cqh]">
+        <span className="text-[#E65C41] text-[13cqh] font-black leading-none tracking-tighter">
           0
         </span>
-        <div className="border-l-[3px] border-[#E65C41]/60 pl-[1.8vh] py-[0.5vh]">
-          <span className="text-[#F4EFE2] text-[2vh] font-black tracking-tight block">
+        <div className="border-l-[3px] border-[#E65C41]/60 pl-[1.8cqh] py-[0.5cqh]">
+          <span className="text-[#F4EFE2] text-[2cqh] font-black tracking-tight block">
             Independent Builds
           </span>
-          <span className="text-[#F4EFE2]/55 text-[1.35vh] font-medium tracking-wide">
+          <span className="text-[#F4EFE2]/55 text-[1.35cqh] font-medium tracking-wide">
             Neither package can compile or ship alone
           </span>
         </div>
       </div>
 
       {/* === BREAK WITH DIP CHIP — bottom right, matte === */}
-      <div className="absolute bottom-[16vh] right-[4vw] z-30">
-        <div className="bg-[#F4EFE2] px-[3vh] py-[2vh] shadow-xl relative overflow-hidden border-l-[4px] border-[#E65C41]">
+      <div className="absolute bottom-[16cqh] right-[4cqw] z-30">
+        <div className="bg-[#F4EFE2] px-[3cqh] py-[2cqh] shadow-xl relative overflow-hidden border-l-[4px] border-[#E65C41]">
           <div
             className="absolute inset-0 opacity-[0.08] mix-blend-multiply pointer-events-none"
             style={noiseStyle}
           />
-          <div className="relative z-10 flex items-center gap-[1.5vh]">
+          <div className="relative z-10 flex items-center gap-[1.5cqh]">
             <svg
-              className="w-[3vh] h-[3vh] text-[#2E1610]"
+              className="w-[3cqh] h-[3cqh] text-[#2E1610]"
               fill="none"
               stroke="currentColor"
               strokeWidth="3"
@@ -252,10 +252,10 @@ export default function CyclicDependencySlide() {
               />
             </svg>
             <div>
-              <span className="text-[#2E1610] text-[2.2vh] font-black tracking-tight block leading-none">
+              <span className="text-[#2E1610] text-[2.2cqh] font-black tracking-tight block leading-none">
                 Break With DIP
               </span>
-              <span className="text-[#2E1610]/70 text-[1.25vh] font-bold tracking-[0.15em] uppercase mt-[0.5vh] block">
+              <span className="text-[#2E1610]/70 text-[1.25cqh] font-bold tracking-[0.15em] uppercase mt-[0.5cqh] block">
                 Dependency Inversion Restores The Layer
               </span>
             </div>
@@ -264,9 +264,9 @@ export default function CyclicDependencySlide() {
       </div>
 
       {/* Description bottom-left */}
-      <div className="absolute bottom-[5vh] left-[4vw] flex items-start gap-[1.5vw] z-20 w-[44vw]">
-        <div className="w-[3vw] h-[3px] bg-[#E8B83D] mt-[1vh] flex-shrink-0" />
-        <p className="text-[1.6vh] leading-[1.6] text-[#F4EFE2]/75 font-medium tracking-wide">
+      <div className="absolute bottom-[5cqh] left-[4cqw] flex items-start gap-[1.5cqw] z-20 w-[44cqw]">
+        <div className="w-[3cqw] h-[3px] bg-[#E8B83D] mt-[1cqh] flex-shrink-0" />
+        <p className="text-[1.6cqh] leading-[1.6] text-[#F4EFE2]/75 font-medium tracking-wide">
           editor And ui.layout Form A Tight
           <br />
           Cycle — Neither Package Can
@@ -276,11 +276,11 @@ export default function CyclicDependencySlide() {
       </div>
 
       {/* Logo circles — bottom right */}
-      <div className="absolute bottom-[5vh] right-[4vw] flex items-center z-20">
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#F4EFE2] flex items-center justify-center font-black text-[3.2vh] text-[#2E1610] shadow-lg z-10">
+      <div className="absolute bottom-[5cqh] right-[4cqw] flex items-center z-20">
+        <div className="w-[7.5cqh] h-[7.5cqh] rounded-full bg-[#F4EFE2] flex items-center justify-center font-black text-[3.2cqh] text-[#2E1610] shadow-lg z-10">
           C
         </div>
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#C49A2D] flex items-center justify-center font-black text-[3.2vh] text-[#2E1610] shadow-lg -ml-[1.8vh] z-0">
+        <div className="w-[7.5cqh] h-[7.5cqh] rounded-full bg-[#C49A2D] flex items-center justify-center font-black text-[3.2cqh] text-[#2E1610] shadow-lg -ml-[1.8cqh] z-0">
           D
         </div>
       </div>

@@ -7,31 +7,31 @@ export default function ThankYouSlide() {
   };
 
   return (
-    <div className="w-screen h-screen bg-[#A83255] relative overflow-hidden font-sans text-[#F4EFE2]">
+    <div className="w-[100cqw] h-[100cqh] bg-[#A83255] relative overflow-hidden font-sans text-[#F4EFE2]">
       {/* === NESTED FRAMES — rounded rectangle outlines === */}
-      <div className="absolute inset-[6vh] rounded-[5vh] border-[2px] border-[#F4EFE2]/12 z-[5]" />
-      <div className="absolute inset-[14vh] rounded-[4vh] border-[2px] border-[#F4EFE2]/08 z-[5]" />
+      <div className="absolute inset-[6cqh] rounded-[5cqh] border-[2px] border-[#F4EFE2]/12 z-[5]" />
+      <div className="absolute inset-[14cqh] rounded-[4cqh] border-[2px] border-[#F4EFE2]/08 z-[5]" />
 
       {/* === TOP BAR === */}
-      <div className="absolute top-[5vh] left-[4vw] font-serif italic text-[#F9D74A] text-[3vh] tracking-wide z-20">
+      <div className="absolute top-[5cqh] left-[4cqw] font-serif italic text-[#F9D74A] text-[3cqh] tracking-wide z-20">
         Closing
       </div>
-      <div className="absolute top-[5.5vh] left-[22vw] text-[#F4EFE2]/60 font-medium text-[1.8vh] tracking-wide z-20">
+      <div className="absolute top-[5.5cqh] left-[22cqw] text-[#F4EFE2]/60 font-medium text-[1.8cqh] tracking-wide z-20">
         Disqet Design
       </div>
-      <div className="absolute top-[5vh] right-[4vw] text-[#F9D74A] font-bold text-[2.2vh] tracking-widest z-20">
+      <div className="absolute top-[5cqh] right-[4cqw] text-[#F9D74A] font-bold text-[2.2cqh] tracking-widest z-20">
         /(14-D1*)
       </div>
 
       {/* === CENTRAL TYPOGRAPHIC HERO === */}
       <div className="absolute inset-0 flex items-center justify-center z-20">
         <div className="text-center">
-          <h1 className="text-[18vh] font-black leading-[0.75] tracking-tighter">
+          <h1 className="text-[18cqh] font-black leading-[0.75] tracking-tighter">
             Thank
             <br />
             <span className="text-[#F9D74A]">You.</span>
           </h1>
-          <p className="text-[2.4vh] font-bold leading-[1.2] mt-[4vh] tracking-tight text-[#F4EFE2]/85">
+          <p className="text-[2.4cqh] font-bold leading-[1.2] mt-[4cqh] tracking-tight text-[#F4EFE2]/85">
             Let&apos;s build something
             <br />
             extraordinary together.
@@ -40,18 +40,18 @@ export default function ThankYouSlide() {
       </div>
 
       {/* Gold accent circle — top left area */}
-      <div className="absolute top-[14vh] left-[12vw] w-[14vh] h-[14vh] rounded-full bg-[#F9D74A] shadow-2xl z-20 flex items-center justify-center">
+      <div className="absolute top-[14cqh] left-[12cqw] w-[14cqh] h-[14cqh] rounded-full bg-[#F9D74A] shadow-2xl z-20 flex items-center justify-center">
         <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
           <div
             className="absolute inset-0 opacity-[0.35] mix-blend-multiply"
             style={noiseStyle}
           />
         </div>
-        <DecorativeAsterisk className="w-[5.5vh] h-[5.5vh] text-[#A83255] shrink-0 relative z-10" />
+        <DecorativeAsterisk className="w-[5.5cqh] h-[5.5cqh] text-[#A83255] shrink-0 relative z-10" />
       </div>
 
       {/* Dark circle — bottom right */}
-      <div className="absolute bottom-[16vh] right-[10vw] w-[12vh] h-[12vh] rounded-full bg-[#1A1A2E] shadow-xl z-20 flex items-center justify-center">
+      <div className="absolute bottom-[16cqh] right-[10cqw] w-[12cqh] h-[12cqh] rounded-full bg-[#1A1A2E] shadow-xl z-20 flex items-center justify-center">
         <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
           <div
             className="absolute inset-0 opacity-[0.3] mix-blend-multiply"
@@ -59,7 +59,7 @@ export default function ThankYouSlide() {
           />
         </div>
         <svg
-          className="w-[5vh] h-[5vh] text-[#F4EFE2] relative z-10"
+          className="w-[5cqh] h-[5cqh] text-[#F4EFE2] relative z-10"
           fill="none"
           stroke="currentColor"
           strokeWidth="2.5"
@@ -74,23 +74,23 @@ export default function ThankYouSlide() {
       </div>
 
       {/* Contact info — bottom left */}
-      <div className="absolute bottom-[8vh] left-[4vw] z-20">
-        <p className="text-[2vh] font-bold leading-[1.3] tracking-tight">
+      <div className="absolute bottom-[8cqh] left-[4cqw] z-20">
+        <p className="text-[2cqh] font-bold leading-[1.3] tracking-tight">
           <span className="text-[#F9D74A]">hello@disqet.design</span>
           <br />
           Istanbul, Turkiye
         </p>
-        <span className="text-[#F4EFE2]/55 text-[1.5vh] font-medium mt-[1vh] block tracking-wide">
+        <span className="text-[#F4EFE2]/55 text-[1.5cqh] font-medium mt-[1cqh] block tracking-wide">
           @disqetdesign
         </span>
       </div>
 
       {/* Logo circles */}
-      <div className="absolute bottom-[5vh] right-[4vw] flex items-center z-20">
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#F9D74A] flex items-center justify-center font-black text-[3.2vh] text-[#A83255] shadow-lg z-10">
+      <div className="absolute bottom-[5cqh] right-[4cqw] flex items-center z-20">
+        <div className="w-[7.5cqh] h-[7.5cqh] rounded-full bg-[#F9D74A] flex items-center justify-center font-black text-[3.2cqh] text-[#A83255] shadow-lg z-10">
           D
         </div>
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#1A1A2E] flex items-center justify-center font-black text-[3.2vh] text-[#F4EFE2] shadow-lg -ml-[1.8vh] z-0">
+        <div className="w-[7.5cqh] h-[7.5cqh] rounded-full bg-[#1A1A2E] flex items-center justify-center font-black text-[3.2cqh] text-[#F4EFE2] shadow-lg -ml-[1.8cqh] z-0">
           S
         </div>
       </div>

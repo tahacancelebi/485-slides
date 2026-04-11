@@ -13,25 +13,25 @@ export default function ToolsUsedSlide() {
   };
 
   return (
-    <div className="w-screen h-screen bg-[#11162F] relative overflow-hidden font-sans text-[#F4EFE2] selection:bg-[#E1F555] selection:text-[#11162F]">
+    <div className="w-[100cqw] h-[100cqh] bg-[#11162F] relative overflow-hidden font-sans text-[#F4EFE2] selection:bg-[#E1F555] selection:text-[#11162F]">
       {/* Sol Üst: Tools */}
-      <div className="absolute top-[5vh] left-[4vw] font-serif italic text-[#6EE0A0] text-[3vh] tracking-wide z-20">
+      <div className="absolute top-[5cqh] left-[4cqw] font-serif italic text-[#6EE0A0] text-[3cqh] tracking-wide z-20">
         Tools Used
       </div>
 
       {/* Üst Orta: Numara Etiketi */}
-      <div className="absolute top-[5.5vh] left-[34vw] font-bold text-[#E1F555] text-[2vh] tracking-widest z-20">
+      <div className="absolute top-[5.5cqh] left-[34cqw] font-bold text-[#E1F555] text-[2cqh] tracking-widest z-20">
         /(04-D1*)
       </div>
 
       {/* Orta Sol: Yıldız İkonu */}
-      <div className="absolute top-[22vh] left-[4vw] z-20 leading-none text-[#E1F555]">
-        <DecorativeAsterisk className="w-[9vh] h-[9vh]" />
+      <div className="absolute top-[22cqh] left-[4cqw] z-20 leading-none text-[#E1F555]">
+        <DecorativeAsterisk className="w-[9cqh] h-[9cqh]" />
       </div>
 
       {/* Orta: Kısa Açıklama */}
-      <div className="absolute top-[24vh] left-[26vw] w-[20vw] z-20">
-        <p className="text-[2.8vh] font-bold leading-[1.05] tracking-tight">
+      <div className="absolute top-[24cqh] left-[26cqw] w-[20cqw] z-20">
+        <p className="text-[2.8cqh] font-bold leading-[1.05] tracking-tight">
           Metric extraction,
           <br />
           statistical analysis and
@@ -41,8 +41,8 @@ export default function ToolsUsedSlide() {
       </div>
 
       {/* ANA DEV BAŞLIK */}
-      <div className="absolute top-[42vh] left-[3.5vw] z-20">
-        <h1 className="text-[14.5vh] font-black leading-[0.8] tracking-tighter">
+      <div className="absolute top-[42cqh] left-[3.5cqw] z-20">
+        <h1 className="text-[14.5cqh] font-black leading-[0.8] tracking-tighter">
           Our
           <br />
           Analysis
@@ -52,18 +52,18 @@ export default function ToolsUsedSlide() {
       </div>
 
       {/* Sol Alt: Logolar */}
-      <div className="absolute bottom-[5vh] left-[4vw] flex items-center z-20">
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#e2f174] flex items-center justify-center font-black text-[3.2vh] text-[#11162F] shadow-lg z-10">
+      <div className="absolute bottom-[5cqh] left-[4cqw] flex items-center z-20">
+        <div className="w-[7.5cqh] h-[7.5cqh] rounded-full bg-[#e2f174] flex items-center justify-center font-black text-[3.2cqh] text-[#11162F] shadow-lg z-10">
           T
         </div>
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#6EE0A0] flex items-center justify-center font-black text-[3.2vh] text-[#11162F] shadow-lg -ml-[1.5vh] z-0">
+        <div className="w-[7.5cqh] h-[7.5cqh] rounded-full bg-[#6EE0A0] flex items-center justify-center font-black text-[3.2cqh] text-[#11162F] shadow-lg -ml-[1.5cqh] z-0">
           U
         </div>
       </div>
 
       {/* Alt Orta: Uzun Paragraf */}
-      <div className="absolute bottom-[4.5vh] left-[24vw] w-[26vw] z-20">
-        <p className="text-[1.35vh] leading-[1.6] text-[#F4EFE2]/80 font-medium tracking-wide">
+      <div className="absolute bottom-[4.5cqh] left-[24cqw] w-[26cqw] z-20">
+        <p className="text-[1.35cqh] leading-[1.6] text-[#F4EFE2]/80 font-medium tracking-wide">
           We Combined Bottom-Up Metric Extraction With
           <br />
           Python-Based Statistical Profiling And A Second
@@ -75,14 +75,14 @@ export default function ToolsUsedSlide() {
       </div>
 
       {/* --- SAĞ KISIM (3 Kart - SciTools, Python, SonarQube) --- */}
-      <div className="absolute right-[3vw] top-[3.5vh] bottom-[3.5vh] w-[42vw] flex flex-col gap-[1.8vh] z-20">
+      <div className="absolute right-[3cqw] top-[3.5cqh] bottom-[3.5cqh] w-[42cqw] flex flex-col gap-[1.8cqh] z-20">
         {/* Kart 1 : Sarı/Yeşil — SciTools Understand */}
-        <div className="flex-1 bg-[#E1F555] rounded-[3vh] p-[4.5vh] relative flex flex-col justify-center shadow-xl">
+        <div className="flex-1 bg-[#E1F555] rounded-[3cqh] p-[4.5cqh] relative flex flex-col justify-center shadow-xl">
           <ArrowIcon />
-          <span className="absolute top-[4vh] left-[4.5vh] text-[#11162F]/40 text-[1.3vh] font-black tracking-widest">
+          <span className="absolute top-[4cqh] left-[4.5cqh] text-[#11162F]/40 text-[1.3cqh] font-black tracking-widest">
             01 · PRIMARY
           </span>
-          <h3 className="text-[#11162F] text-[3.3vh] font-bold leading-[0.95] tracking-tight w-[85%] mt-[2vh]">
+          <h3 className="text-[#11162F] text-[3.3cqh] font-bold leading-[0.95] tracking-tight w-[85%] mt-[2cqh]">
             SciTools Understand
             <br />
             Primary metric extraction,
@@ -94,12 +94,12 @@ export default function ToolsUsedSlide() {
         </div>
 
         {/* Kart 2 : Su Yeşili — Python */}
-        <div className="flex-1 bg-[#6EE0A0] rounded-[3vh] p-[4.5vh] relative flex flex-col justify-center shadow-xl">
+        <div className="flex-1 bg-[#6EE0A0] rounded-[3cqh] p-[4.5cqh] relative flex flex-col justify-center shadow-xl">
           <ArrowIcon />
-          <span className="absolute top-[4vh] left-[4.5vh] text-[#11162F]/40 text-[1.3vh] font-black tracking-widest">
+          <span className="absolute top-[4cqh] left-[4.5cqh] text-[#11162F]/40 text-[1.3cqh] font-black tracking-widest">
             02 · ANALYSIS
           </span>
-          <h3 className="text-[#11162F] text-[3.3vh] font-bold leading-[0.95] tracking-tight w-[85%] mt-[2vh]">
+          <h3 className="text-[#11162F] text-[3.3cqh] font-bold leading-[0.95] tracking-tight w-[85%] mt-[2cqh]">
             Python · Pandas
             <br />
             Matplotlib for statistical
@@ -111,12 +111,12 @@ export default function ToolsUsedSlide() {
         </div>
 
         {/* Kart 3 : Canlı Mavi — SonarQube */}
-        <div className="flex-1 bg-[#3655EB] rounded-[3vh] p-[4.5vh] relative flex flex-col justify-center shadow-xl">
+        <div className="flex-1 bg-[#3655EB] rounded-[3cqh] p-[4.5cqh] relative flex flex-col justify-center shadow-xl">
           <ArrowIcon />
-          <span className="absolute top-[4vh] left-[4.5vh] text-[#11162F]/50 text-[1.3vh] font-black tracking-widest">
+          <span className="absolute top-[4cqh] left-[4.5cqh] text-[#11162F]/50 text-[1.3cqh] font-black tracking-widest">
             03 · VALIDATION
           </span>
-          <h3 className="text-[#11162F] text-[3.3vh] font-bold leading-[0.95] tracking-tight w-[85%] mt-[2vh]">
+          <h3 className="text-[#11162F] text-[3.3cqh] font-bold leading-[0.95] tracking-tight w-[85%] mt-[2cqh]">
             SonarQube
             <br />
             Cross-validates findings
@@ -145,7 +145,7 @@ export default function ToolsUsedSlide() {
 function ArrowIcon() {
   return (
     <svg
-      className="absolute top-[4vh] right-[4vh] w-[4.5vh] h-[4.5vh] text-[#11162F]"
+      className="absolute top-[4cqh] right-[4cqh] w-[4.5cqh] h-[4.5cqh] text-[#11162F]"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
