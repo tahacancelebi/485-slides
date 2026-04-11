@@ -64,9 +64,9 @@ export default function OssOverviewSlide() {
       {/* Sağ Üst: Etiketler */}
       <div className="absolute top-[5vh] right-[4vw] flex items-center gap-[3.5vw] text-[1.8vh] font-bold z-30">
         <span className="text-[#F1A90B] font-medium tracking-wide">
-          BBM485 · T1
+          BBM485 · T2
         </span>
-        <span className="text-[#E61B5A] tracking-wider">/(02-T1*)</span>
+        <span className="text-[#E61B5A] tracking-wider">/(02-D1*)</span>
       </div>
 
       {/* Sağ Üst: Uzun Paragraf */}

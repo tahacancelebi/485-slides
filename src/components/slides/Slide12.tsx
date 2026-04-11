@@ -34,10 +34,10 @@ export default function TeamAllocationSlide() {
         Team Allocation &amp; Q&amp;A
       </div>
       <div className="absolute top-[5.5vh] left-[32vw] text-[#1A1A2E]/40 font-medium text-[1.8vh] tracking-wide z-20">
-        BBM485 · T1
+        BBM485 · T2
       </div>
       <div className="absolute top-[5vh] right-[4vw] text-[#E65C41] font-bold text-[2.2vh] tracking-widest z-20">
-        /(17-T1*)
+        /(17-D1*)
       </div>
 
       {/* === MAIN HEADING === */}

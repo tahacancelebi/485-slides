@@ -5,110 +5,170 @@ export default function WMCSlide() {
     backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
   };
 
-  return (
-    <div className="w-screen h-screen bg-[#E87C5A] relative overflow-hidden font-sans text-[#F4EFE2]">
-      {/* === CREAM SEMICIRCLE — anchored right edge === */}
-      <div className="absolute top-1/2 -translate-y-1/2 -right-[34vh] w-[70vh] h-[70vh] rounded-full bg-[#F4EFE2] shadow-[0_0_80px_rgba(0,0,0,0.12)] z-10 overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.06] mix-blend-multiply pointer-events-none"
-          style={noiseStyle}
-        />
+  const dotsStyle = {
+    backgroundImage: `radial-gradient(rgba(244,239,226,0.08) 1.2px, transparent 1.2px)`,
+    backgroundSize: '26px 26px',
+  };
 
-        {/* Content inside the visible left half of semicircle */}
-        <div className="absolute inset-0 flex flex-col justify-center pr-[38vh] pl-[6vh]">
-          <span className="text-[#E87C5A] text-[1.6vh] font-bold tracking-[0.35em] uppercase">
-            Worst Case
-          </span>
-          <div className="text-[#1A1A2E] text-[7vh] font-black leading-[0.8] tracking-tighter mt-[1.5vh]">
-            Workflow
-            <br />
-            Editor
-          </div>
-          <div className="flex gap-[3vh] mt-[3vh]">
-            <div>
-              <span className="text-[#E87C5A] text-[3.5vh] font-black leading-none">
-                576
-              </span>
-              <span className="text-[#1A1A2E]/55 text-[1.4vh] font-bold block mt-[0.3vh]">
-                WMC
-              </span>
-            </div>
-            <div>
-              <span className="text-[#E87C5A] text-[3.5vh] font-black leading-none">
-                12.65%
-              </span>
-              <span className="text-[#1A1A2E]/55 text-[1.4vh] font-bold block mt-[0.3vh]">
-                Violate &gt;40
-              </span>
-            </div>
-          </div>
-        </div>
+  // Threshold at 40, max at 576 → threshold sits at 6.94% of the scale.
+  const safePct = (40 / 576) * 100;
+
+  return (
+    <div className="w-screen h-screen bg-[#2D0B38] relative overflow-hidden font-sans text-[#F4EFE2]">
+      {/* Ghost watermark 576 — bottom right */}
+      <div className="absolute -bottom-[18vh] -right-[4vw] text-[68vh] font-black leading-none tracking-tighter text-[#F4EFE2]/[0.028] z-0 select-none">
+        576
       </div>
+
+      {/* Slim vertical stripes — editorial texture on left edge */}
+      <div className="absolute top-0 bottom-0 left-[3vw] w-[1px] bg-[#F4EFE2]/8 z-0" />
+      <div className="absolute top-0 bottom-0 left-[3.4vw] w-[1px] bg-[#F4EFE2]/5 z-0" />
 
       {/* === TOP BAR === */}
-      <div className="absolute top-[5vh] left-[4vw] font-serif italic text-[#F4EFE2] text-[3vh] tracking-wide z-20">
+      <div className="absolute top-[5vh] left-[4vw] font-serif italic text-[#E8B83D] text-[3vh] tracking-wide z-20">
         Q3 · Structural Complexity (WMC)
       </div>
-      <div className="absolute top-[5.5vh] left-[36vw] text-[#1A1A2E] font-medium text-[1.8vh] tracking-wide z-20">
+      <div className="absolute top-[5.5vh] left-[36vw] text-[#E65C41] font-medium text-[1.8vh] tracking-wide z-20">
         BBM485 · T1
       </div>
-      <div className="absolute top-[5vh] right-[4vw] text-[#1A1A2E] font-bold text-[2.2vh] tracking-widest z-20">
+      <div className="absolute top-[5vh] right-[4vw] text-[#E8B83D] font-bold text-[2.2vh] tracking-widest z-20">
         /(08-T1*)
       </div>
 
-      {/* === MAIN HEADING === */}
-      <div className="absolute top-[18vh] left-[4vw] z-20 w-[52vw]">
+      {/* === MAIN HEADING — Upper left === */}
+      <div className="absolute top-[14vh] left-[4vw] z-20 w-[58vw]">
         <h1 className="text-[12vh] font-black leading-[0.78] tracking-tighter">
           Impossible
           <br />
-          To <span className="text-[#1A1A2E]">Unit Test.</span>
+          To <span className="text-[#E8B83D]">Unit Test.</span>
         </h1>
+        <p className="text-[1.5vh] font-bold text-[#F4EFE2]/50 tracking-[0.28em] uppercase mt-[2.5vh]">
+          Weighted Methods Per Class · KNIME Workbench
+        </p>
       </div>
 
-      {/* Asterisk */}
-      <div className="absolute top-[16vh] left-[48vw] text-[#1A1A2E] text-[8vh] font-black z-20 leading-none">
-        *
+      {/* === HERO 576 — right side typographic === */}
+      <div className="absolute top-[16vh] right-[4vw] z-20 text-right">
+        <div className="inline-flex items-baseline gap-[1.2vh] justify-end">
+          <span className="text-[1.2vh] font-black text-[#E8B83D] tracking-[0.3em] uppercase">
+            Worst Case
+          </span>
+          <div className="w-[2.5vh] h-[1px] bg-[#E8B83D]/60" />
+        </div>
+        <div className="relative mt-[1vh]">
+          <span className="text-[#F4EFE2] text-[24vh] font-black leading-[0.72] tracking-tighter block">
+            576
+          </span>
+          {/* Ink underline */}
+          <div className="absolute -bottom-[1vh] right-0 w-[14vh] h-[0.5vh] bg-[#E65C41]" />
+        </div>
+        <p className="text-[#F4EFE2]/80 text-[2vh] font-black leading-[1.15] mt-[2vh] tracking-tight">
+          WorkflowEditor
+        </p>
+        <p className="text-[#F4EFE2]/45 text-[1.4vh] font-medium leading-[1.4] mt-[0.8vh] tracking-wide">
+          14.4× above the very-complex
+          <br />
+          class threshold of 40
+        </p>
       </div>
 
-      {/* === DARK FLOATING STAT CARD === */}
-      <div className="absolute bottom-[28vh] left-[36vw] bg-[#1A1A2E] rounded-[2.5vh] px-[3vh] py-[2.5vh] shadow-2xl z-30 w-[17vw]">
-        <div
-          className="absolute inset-0 rounded-[2.5vh] overflow-hidden pointer-events-none"
-        >
+      {/* === VIOLATION CHIP — middle left === */}
+      <div className="absolute top-[54vh] left-[4vw] z-20">
+        <div className="inline-flex items-stretch bg-[#1A0B0B] border-l-[4px] border-[#E65C41] shadow-xl relative overflow-hidden">
           <div
-            className="absolute inset-0 opacity-[0.25] mix-blend-multiply"
+            className="absolute inset-0 opacity-[0.22] mix-blend-overlay pointer-events-none"
             style={noiseStyle}
           />
-        </div>
-        <svg
-          className="absolute top-[2vh] right-[2vh] w-[3vh] h-[3vh] text-[#F4EFE2]/40"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M7 17L17 7M17 7H7M17 7V17"
-          />
-        </svg>
-        <div className="relative z-10">
-          <div className="text-[#E87C5A] text-[5vh] font-black leading-none tracking-tighter">
-            &gt;40
+          <div className="relative z-10 flex items-baseline gap-[2.2vh] px-[3vh] py-[2.2vh]">
+            <span className="text-[#E8B83D] text-[6vh] font-black leading-none tracking-tighter">
+              12.65%
+            </span>
+            <div>
+              <span className="text-[#F4EFE2] text-[1.5vh] font-black tracking-[0.22em] uppercase block">
+                Of Classes Violate
+              </span>
+              <span className="text-[#F4EFE2]/55 text-[1.3vh] font-medium tracking-wide">
+                WMC &gt; 40 · Very-complex threshold
+              </span>
+            </div>
           </div>
-          <p className="text-[#F4EFE2]/80 text-[1.5vh] font-bold leading-[1.2] mt-[1vh]">
-            Very-complex
-            <br />
-            class threshold
-          </p>
+        </div>
+      </div>
+
+      {/* === DISTRIBUTION SCALE — solid blocks, no gradient === */}
+      <div className="absolute bottom-[23vh] left-[4vw] right-[4vw] z-20">
+        {/* Header row */}
+        <div className="flex items-end justify-between mb-[1.6vh]">
+          <span className="text-[#F4EFE2]/40 text-[1.25vh] font-bold tracking-[0.3em] uppercase">
+            WMC Distribution Scale
+          </span>
+          <span className="text-[#F4EFE2]/40 text-[1.25vh] font-bold tracking-[0.3em] uppercase">
+            0 → 576 · Outlier
+          </span>
+        </div>
+
+        {/* Track — flex container with two solid blocks */}
+        <div className="relative h-[2.4vh] bg-[#1A0B0B] flex overflow-hidden">
+          {/* Safe zone — solid olive */}
+          <div
+            className="relative bg-[#5C8A5C] overflow-hidden"
+            style={{ width: `${safePct}%` }}
+          >
+            <div
+              className="absolute inset-0 opacity-[0.3] mix-blend-multiply pointer-events-none"
+              style={noiseStyle}
+            />
+          </div>
+          {/* Violation zone — solid coral */}
+          <div className="relative flex-1 bg-[#E65C41] overflow-hidden">
+            <div
+              className="absolute inset-0 opacity-[0.3] mix-blend-multiply pointer-events-none"
+              style={noiseStyle}
+            />
+          </div>
+          {/* Outlier marker — cream block at far right */}
+          <div className="absolute right-0 top-0 bottom-0 w-[0.8vh] bg-[#F4EFE2]" />
+        </div>
+
+        {/* Tick row below track */}
+        <div className="relative mt-[0.8vh] h-[4vh]">
+          {/* 0 label — flush left */}
+          <div className="absolute left-0 top-0">
+            <div className="w-[1px] h-[1vh] bg-[#F4EFE2]/30 mb-[0.4vh]" />
+            <span className="text-[#F4EFE2]/40 text-[1.2vh] font-bold tracking-wide">
+              0
+            </span>
+          </div>
+
+          {/* Threshold 40 tick */}
+          <div
+            className="absolute top-0"
+            style={{ left: `${safePct}%`, transform: 'translateX(-50%)' }}
+          >
+            <div className="flex flex-col items-center">
+              <div className="w-[2px] h-[1.2vh] bg-[#E8B83D]" />
+              <span className="text-[#E8B83D] text-[1.2vh] font-black tracking-[0.18em] uppercase mt-[0.4vh] whitespace-nowrap">
+                40 · Threshold
+              </span>
+            </div>
+          </div>
+
+          {/* 576 outlier — flush right */}
+          <div className="absolute right-0 top-0">
+            <div className="flex flex-col items-end">
+              <div className="w-[2px] h-[1.2vh] bg-[#F4EFE2] self-end" />
+              <span className="text-[#F4EFE2] text-[1.2vh] font-black tracking-[0.18em] uppercase mt-[0.4vh] whitespace-nowrap">
+                576 · WorkflowEditor
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Description */}
-      <div className="absolute bottom-[14vh] left-[4vw] flex items-start gap-[1.5vw] z-20 w-[40vw]">
-        <div className="w-[3vw] h-[3px] bg-[#F4EFE2] mt-[1vh] flex-shrink-0" />
-        <p className="text-[1.6vh] leading-[1.6] text-[#F4EFE2]/85 font-medium tracking-wide">
+      <div className="absolute bottom-[5vh] left-[4vw] flex items-start gap-[1.5vw] z-20 w-[50vw]">
+        <div className="w-[3vw] h-[3px] bg-[#E8B83D] mt-[1vh] flex-shrink-0" />
+        <p className="text-[1.6vh] leading-[1.6] text-[#F4EFE2]/75 font-medium tracking-wide">
           A WMC Of 576 Means Hundreds Of If/Else Branches
           <br />
           And Loops — Making Full Path Coverage Practically
@@ -118,25 +178,21 @@ export default function WMCSlide() {
       </div>
 
       {/* Logo circles */}
-      <div className="absolute bottom-[5vh] left-[4vw] flex items-center z-20">
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#1A1A2E] flex items-center justify-center font-black text-[3.2vh] text-[#F4EFE2] shadow-lg z-10">
+      <div className="absolute bottom-[5vh] right-[4vw] flex items-center z-20">
+        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#E8B83D] flex items-center justify-center font-black text-[3.2vh] text-[#2D0B38] shadow-lg z-10">
           W
         </div>
-        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#F4EFE2] flex items-center justify-center font-black text-[3.2vh] text-[#E87C5A] shadow-lg -ml-[1.8vh] z-0">
+        <div className="w-[7.5vh] h-[7.5vh] rounded-full bg-[#E65C41] flex items-center justify-center font-black text-[3.2vh] text-[#F4EFE2] shadow-lg -ml-[1.8vh] z-0">
           M
         </div>
       </div>
 
-      {/* === TEXTURES === */}
+      {/* Dot pattern overlay */}
+      <div className="absolute inset-0 z-40 pointer-events-none" style={dotsStyle} />
+
+      {/* Noise overlay */}
       <div
-        className="absolute inset-0 z-40 pointer-events-none"
-        style={{
-          backgroundImage: `radial-gradient(rgba(244,239,219,0.1) 1.5px, transparent 1.5px)`,
-          backgroundSize: '26px 26px',
-        }}
-      />
-      <div
-        className="absolute inset-0 z-50 pointer-events-none opacity-[0.2] mix-blend-multiply"
+        className="absolute inset-0 z-50 pointer-events-none opacity-[0.22] mix-blend-multiply"
         style={noiseStyle}
       />
     </div>

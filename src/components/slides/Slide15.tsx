@@ -24,10 +24,10 @@ export default function OverallEvaluationSlide() {
         Overall Evaluation
       </div>
       <div className="absolute top-[5.5vh] left-[30vw] text-[#2D1A0A]/60 font-medium text-[1.8vh] tracking-wide z-20">
-        BBM485 · T1
+        BBM485 · T2
       </div>
       <div className="absolute top-[5vh] right-[4vw] text-[#2D1A0A] font-bold text-[2.2vh] tracking-widest z-20">
-        /(15-T1*)
+        /(15-D1*)
       </div>
 
       {/* === MAIN HEADING — on gold zone === */}
@@ -56,14 +56,13 @@ export default function OverallEvaluationSlide() {
       </div>
 
       {/* === FINDING PILLS — floating on the wave curve === */}
-      <div className="absolute bottom-[30vh] left-[4vw] flex flex-wrap gap-[1.5vh] z-20 w-[55vw]">
+      <div className="absolute top-[50vh] left-[4vw] flex flex-wrap gap-[1.5vh] z-20 w-[55vw]">
         {[
           'God Class Pattern',
           'Low Cohesion (LCOM)',
           'Cyclic Dependency',
           'Healthy Inheritance',
           'Testability Risk',
-          'High Technical Debt',
         ].map((finding) => (
           <div
             key={finding}

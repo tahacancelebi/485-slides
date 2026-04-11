@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import PresentationFrame from '@/components/shared/PresentationFrame';
 import Slide1 from '@/components/slides/Slide1';
 import Slide2 from '@/components/slides/Slide2';
 import Slide3 from '@/components/slides/Slide3';
@@ -61,7 +62,9 @@ export default function SlideShell() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      <CurrentSlide />
+      <PresentationFrame>
+        <CurrentSlide />
+      </PresentationFrame>
 
       {/* Slide indicator */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-[100]">

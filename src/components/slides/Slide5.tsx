@@ -73,10 +73,10 @@ export default function CBOSlide() {
         Q2 · Coupling (CBO)
       </div>
       <div className="absolute top-[5.5vh] left-[28vw] text-[#DAA520] font-medium text-[1.8vh] tracking-wide z-20">
-        BBM485 · T1
+        BBM485 · T2
       </div>
       <div className="absolute top-[5vh] right-[4vw] text-[#C0522C] font-bold text-[2.2vh] tracking-widest z-20">
-        /(07-T1*)
+        /(07-D1*)
       </div>
 
       {/* === MAIN HEADLINE — Left side massive text === */}

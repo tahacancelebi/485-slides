@@ -23,10 +23,10 @@ export default function LOCSlide() {
         Q1 · Code Size (LOC)
       </div>
       <div className="absolute top-[5.5vh] right-[22vw] text-[#D4A843] font-medium text-[1.8vh] tracking-wide z-20">
-        BBM485 · T1
+        BBM485 · T2
       </div>
       <div className="absolute top-[5vh] right-[4vw] text-[#E85D3A] font-bold text-[2.2vh] tracking-widest z-20">
-        /(06-T1*)
+        /(06-D1*)
       </div>
 
       {/* Decorative + on cream */}
@@ -66,7 +66,7 @@ export default function LOCSlide() {
       </div>
 
       {/* === FLOATING GOLD CIRCLE — Straddling diagonal on green side === */}
-      <div className="absolute top-[38vh] left-[12vw] w-[16vh] h-[16vh] rounded-full bg-[#D4A843] shadow-2xl z-30 flex items-center justify-center">
+      <div className="absolute top-[28vh] left-[12vw] w-[16vh] h-[16vh] rounded-full bg-[#D4A843] shadow-2xl z-30 flex items-center justify-center">
         <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
           <div
             className="absolute inset-0 opacity-[0.35] mix-blend-multiply"
@@ -84,7 +84,7 @@ export default function LOCSlide() {
       </div>
 
       {/* === FLOATING CORAL BADGE — On the diagonal line === */}
-      <div className="absolute top-[50vh] left-[34vw] bg-[#E85D3A] rounded-[2.5vh] px-[3.5vh] py-[2.5vh] shadow-2xl z-30">
+      <div className="absolute top-[48vh] left-[44vw] bg-[#E85D3A] rounded-[2.5vh] px-[3.5vh] py-[2.5vh] shadow-2xl z-30">
         <div className="absolute inset-0 rounded-[2.5vh] overflow-hidden pointer-events-none">
           <div
             className="absolute inset-0 opacity-[0.3] mix-blend-multiply"
@@ -104,7 +104,7 @@ export default function LOCSlide() {
       </div>
 
       {/* === MAIN HEADING — Lower left on green === */}
-      <div className="absolute bottom-[14vh] left-[4vw] z-20">
+      <div className="absolute bottom-[20vh] left-[4vw] z-20">
         <h1 className="text-[12vh] font-black leading-[0.78] tracking-tighter text-[#F4EFE2]">
           One Class,
           <br />

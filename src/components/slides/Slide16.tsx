@@ -6,7 +6,7 @@ export default function RecommendationsSlide() {
   };
 
   return (
-    <div className="w-screen h-screen bg-[#DDD0EE] relative overflow-hidden font-sans text-[#1A1A2E]">
+    <div className="w-screen h-screen bg-[#F4EFE2] relative overflow-hidden font-sans text-[#1A1A2E]">
       {/* === TOP BAR === */}
       <div className="absolute top-[5vh] left-[4vw] font-serif italic text-[#6B3FA0] text-[3vh] tracking-wide z-30">
         Recommendations
@@ -15,7 +15,7 @@ export default function RecommendationsSlide() {
         Bridge to D2
       </div>
       <div className="absolute top-[5vh] right-[4vw] text-[#6B3FA0] font-bold text-[2.2vh] tracking-widest z-30">
-        /(16-T1*)
+        /(16-D1*)
       </div>
 
       {/* === MAIN HEADING === */}

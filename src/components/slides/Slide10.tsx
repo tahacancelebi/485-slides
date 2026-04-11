@@ -12,10 +12,10 @@ export default function SystemMetricSummarySlide() {
         System-Level Summary
       </div>
       <div className="absolute top-[5.5vh] left-[26vw] text-[#1A1A2E]/40 font-medium text-[1.8vh] tracking-wide z-30">
-        BBM485 · T1
+        BBM485 · T2
       </div>
       <div className="absolute top-[5vh] right-[4vw] text-[#E65C41] font-bold text-[2.2vh] tracking-widest z-30">
-        /(05-T1*)
+        /(05-D1*)
       </div>
 
       {/* === MAIN HEADING === */}

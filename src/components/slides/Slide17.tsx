@@ -12,10 +12,10 @@ export default function InheritanceSlide() {
         Q4 · Inheritance (DIT &amp; NOC)
       </div>
       <div className="absolute top-[5.5vh] left-[36vw] text-[#B8D44E]/60 font-medium text-[1.8vh] tracking-wide z-30">
-        BBM485 · T1
+        BBM485 · T2
       </div>
       <div className="absolute top-[5vh] right-[4vw] text-[#E8B83D] font-bold text-[2.2vh] tracking-widest z-30">
-        /(12-T1*)
+        /(12-D1*)
       </div>
 
       {/* === MAIN HEADING === */}

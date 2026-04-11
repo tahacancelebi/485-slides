@@ -97,7 +97,7 @@ export default function LCOMSlide() {
             </div>
           </div>
           <div className="absolute top-12 right-10 lg:top-16 lg:right-14 text-[#EAD037] font-bold text-xl lg:text-2xl tracking-wider z-20">
-            /(11-T1*)
+            /(11-D1*)
           </div>
 
           {/* Dev Çember */}

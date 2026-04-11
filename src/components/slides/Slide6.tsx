@@ -22,10 +22,10 @@ export default function GQMSlide() {
         Methodology
       </div>
       <div className="absolute top-[5.5vh] left-[28vw] text-[#E8B83D] font-medium text-[1.8vh] tracking-wide z-20">
-        BBM485 · T1
+        BBM485 · T2
       </div>
       <div className="absolute top-[5vh] right-[4vw] text-[#E65C41] font-bold text-[2.2vh] tracking-widest z-20">
-        /(03-T1*)
+        /(03-D1*)
       </div>
 
       {/* Main heading */}
@@ -134,7 +134,7 @@ export default function GQMSlide() {
       </div>
 
       {/* Bottom description */}
-      <div className="absolute bottom-[8vh] left-[4vw] flex items-start gap-[1.5vw] z-20 w-[40vw]">
+      <div className="absolute bottom-[3vh] left-[4vw] flex items-start gap-[1.5vw] z-20 w-[40vw]">
         <div className="w-[3vw] h-[3px] bg-[#E8B83D] mt-[1vh] flex-shrink-0" />
         <p className="text-[1.6vh] leading-[1.65] text-[#F4EFE2]/80 font-medium tracking-wide">
           Our Goal Is Maintainability From An Architect&apos;s

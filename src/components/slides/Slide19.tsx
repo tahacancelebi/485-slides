@@ -12,10 +12,10 @@ export default function DependencyGraphSlide() {
         Concrete Architecture
       </div>
       <div className="absolute top-[5.5vh] left-[32vw] text-[#F4EFE2]/40 font-medium text-[1.8vh] tracking-wide z-30">
-        BBM485 · T1
+        BBM485 · T2
       </div>
       <div className="absolute top-[5vh] right-[5vw] text-[#E8B83D] font-bold text-[2.2vh] tracking-widest z-30">
-        /(13-T1*)
+        /(13-D1*)
       </div>
 
       {/* === LEFT SIDE HEADING === */}
@@ -72,7 +72,7 @@ export default function DependencyGraphSlide() {
               <div className="w-[1.1vh] h-[1.1vh] rounded-full bg-[#E8B83D]" />
               <div className="w-[1.1vh] h-[1.1vh] rounded-full bg-[#3D5240]" />
               <span className="ml-[1vh] text-[#2A1A1A]/70 text-[1.2vh] font-bold tracking-widest">
-                FIG · 13-T1 · knime-workbench.dep-graph
+                FIG · 13-T2 · knime-workbench.dep-graph
               </span>
             </div>
             <span className="text-[#2A1A1A]/50 text-[1.1vh] font-bold tracking-widest">

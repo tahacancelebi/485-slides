@@ -30,14 +30,14 @@ export default function TitleSlide() {
         <div className="flex justify-between items-start tracking-wide">
           <div className="flex items-center space-x-8">
             <span className="text-[#F5D95C] font-semibold text-lg">
-              BBM485 · T1 Report
+              BBM485 · T2 Report
             </span>
             <span className="font-serif italic text-3xl tracking-wide">
               Concrete Architecture
             </span>
           </div>
           <span className="text-[#F27A8A] font-bold text-2xl tracking-wider">
-            /(01-T1*)
+            /(01-D1*)
           </span>
         </div>
 

@@ -20,7 +20,7 @@ export default function ToolsUsedSlide() {
 
       {/* Üst Orta: Numara Etiketi */}
       <div className="absolute top-[5.5vh] left-[34vw] font-bold text-[#E1F555] text-[2vh] tracking-widest z-20">
-        /(04-T1*)
+        /(04-D1*)
       </div>
 
       {/* Orta Sol: Yıldız İkonu */}
