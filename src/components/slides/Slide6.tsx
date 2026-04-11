@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function GQMSlide() {
   const noiseStyle = {
@@ -38,8 +39,8 @@ export default function GQMSlide() {
       </div>
 
       {/* Asterisk */}
-      <div className="absolute top-[13vh] right-[20vw] text-[#E8B83D] text-[7vh] font-black z-20 leading-none">
-        *
+      <div className="absolute top-[13vh] right-[20vw] z-20 leading-none text-[#E8B83D]">
+        <DecorativeAsterisk className="w-[7vh] h-[7vh]" />
       </div>
 
       {/* === ZIGZAG STACKED BARS === */}

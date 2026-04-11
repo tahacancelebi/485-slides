@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function CBOSlide() {
   const noiseStyle = {
@@ -93,8 +94,8 @@ export default function CBOSlide() {
       </div>
 
       {/* Large decorative asterisk */}
-      <div className="absolute top-[15vh] left-[46vw] text-[#DAA520] text-[9vh] font-black z-20 leading-none">
-        *
+      <div className="absolute top-[15vh] left-[46vw] z-20 leading-none text-[#DAA520]">
+        <DecorativeAsterisk className="w-[9vh] h-[9vh]" />
       </div>
 
       {/* Description paragraph with horizontal line accent */}

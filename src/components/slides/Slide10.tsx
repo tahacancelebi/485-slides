@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function SystemMetricSummarySlide() {
   const noiseStyle = {
@@ -28,8 +29,8 @@ export default function SystemMetricSummarySlide() {
       </div>
 
       {/* Asterisk */}
-      <div className="absolute top-[14vh] right-[16vw] text-[#2C51F0] text-[7vh] font-black z-30 leading-none">
-        *
+      <div className="absolute top-[14vh] right-[16vw] z-30 leading-none text-[#2C51F0]">
+        <DecorativeAsterisk className="w-[7vh] h-[7vh]" />
       </div>
 
       {/* === BENTO GRID === */}

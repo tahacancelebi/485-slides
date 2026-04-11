@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function TitleSlide() {
   const noiseStyle = {
@@ -52,37 +53,7 @@ export default function TitleSlide() {
           </h1>
 
           <div className="flex flex-col items-end text-right w-[25%] pt-4">
-            <svg
-              className="w-16 h-16 text-[#F5D95C] mb-8"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <rect x="10.5" y="1" width="3" height="22" rx="1.5" />
-              <rect
-                x="10.5"
-                y="1"
-                width="3"
-                height="22"
-                rx="1.5"
-                transform="rotate(45 12 12)"
-              />
-              <rect
-                x="10.5"
-                y="1"
-                width="3"
-                height="22"
-                rx="1.5"
-                transform="rotate(90 12 12)"
-              />
-              <rect
-                x="10.5"
-                y="1"
-                width="3"
-                height="22"
-                rx="1.5"
-                transform="rotate(135 12 12)"
-              />
-            </svg>
+            <DecorativeAsterisk className="w-16 h-16 text-[#F5D95C] mb-8 shrink-0" />
             <p className="text-sm md:text-base leading-snug text-white/90 font-medium">
               Maintainability Analysis
               <br />

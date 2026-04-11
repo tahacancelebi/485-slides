@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function TeamAllocationSlide() {
   const noiseStyle = {
@@ -50,8 +51,8 @@ export default function TeamAllocationSlide() {
       </div>
 
       {/* Asterisk */}
-      <div className="absolute top-[13vh] right-[18vw] text-[#1B8A6B] text-[7vh] font-black z-20 leading-none">
-        *
+      <div className="absolute top-[10vh] right-[4vw] z-20 leading-none text-[#1B8A6B]">
+        <DecorativeAsterisk className="w-[6vh] h-[6vh]" />
       </div>
 
       {/* Side description */}

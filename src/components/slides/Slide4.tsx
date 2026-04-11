@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function ToolsUsedSlide() {
   const noiseStyle = {
@@ -24,8 +25,8 @@ export default function ToolsUsedSlide() {
       </div>
 
       {/* Orta Sol: Yıldız İkonu */}
-      <div className="absolute top-[22vh] left-[4vw] text-[#E1F555] text-[9vh] font-black leading-none z-20">
-        *
+      <div className="absolute top-[22vh] left-[4vw] z-20 leading-none text-[#E1F555]">
+        <DecorativeAsterisk className="w-[9vh] h-[9vh]" />
       </div>
 
       {/* Orta: Kısa Açıklama */}

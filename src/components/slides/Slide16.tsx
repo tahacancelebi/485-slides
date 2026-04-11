@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function RecommendationsSlide() {
   const noiseStyle = {
@@ -28,8 +29,8 @@ export default function RecommendationsSlide() {
       </div>
 
       {/* Asterisk */}
-      <div className="absolute top-[13vh] right-[16vw] text-[#6B3FA0] text-[7vh] font-black z-30 leading-none">
-        *
+      <div className="absolute top-[13vh] right-[16vw] z-30 leading-none text-[#6B3FA0]">
+        <DecorativeAsterisk className="w-[7vh] h-[7vh]" />
       </div>
 
       {/* === THREE OVERLAPPING TILTED CARDS === */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function OssOverviewSlide() {
   const noiseStyle = {
@@ -49,9 +50,7 @@ export default function OssOverviewSlide() {
 
       {/* 4. KÜÇÜK MOR ÇEMBER (Alt Orta) */}
       <div className="absolute w-[24vh] h-[24vh] bg-[#6112C8] rounded-full left-[52vw] bottom-[10vh] shadow-xl z-20 flex items-center justify-center">
-        <span className="text-[#F1A90B] text-[13vh] font-black leading-none mt-[3.5vh] ml-[0.5vh]">
-          *
-        </span>
+        <DecorativeAsterisk className="text-[#F1A90B] w-[6vw] h-[6vw] shrink-0 " />
       </div>
 
       {/* --- METİNLER VE İKAZLAR --- */}

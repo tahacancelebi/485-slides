@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function TestimonialsSlide() {
   const noiseStyle = {
@@ -67,8 +68,8 @@ export default function TestimonialsSlide() {
       </div>
 
       {/* Decorative asterisk */}
-      <div className="absolute top-[46vh] right-[40vw] text-[#E65C41] text-[8vh] font-black z-20 leading-none">
-        *
+      <div className="absolute top-[46vh] right-[40vw] z-20 leading-none text-[#E65C41]">
+        <DecorativeAsterisk className="w-[8vh] h-[8vh]" />
       </div>
 
       {/* === FLOATING SECOND TESTIMONIAL === */}

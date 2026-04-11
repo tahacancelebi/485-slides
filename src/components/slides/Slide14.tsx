@@ -1,4 +1,5 @@
 import React from 'react';
+import { DecorativeAsterisk } from '@/components/shared/DecorativeAsterisk';
 
 export default function ThankYouSlide() {
   const noiseStyle = {
@@ -46,9 +47,7 @@ export default function ThankYouSlide() {
             style={noiseStyle}
           />
         </div>
-        <span className="text-[6vh] font-black text-[#A83255] leading-none relative z-10">
-          *
-        </span>
+        <DecorativeAsterisk className="w-[5.5vh] h-[5.5vh] text-[#A83255] shrink-0 relative z-10" />
       </div>
 
       {/* Dark circle — bottom right */}
