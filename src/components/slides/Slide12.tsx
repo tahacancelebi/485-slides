@@ -55,7 +55,7 @@ export default function TeamAllocationSlide() {
       </div>
 
       {/* Side description */}
-      <div className="absolute top-[16vh] right-[4vw] w-[28vw] text-right z-20">
+      <div className="absolute top-[18vh] right-[4vw] w-[28vw] text-right z-20">
         <p className="text-[1.7vh] leading-[1.55] text-[#1A1A2E]/55 font-medium tracking-wide">
           Three Students, One Analysis —
           <br />

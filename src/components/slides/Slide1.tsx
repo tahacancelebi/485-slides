@@ -42,8 +42,8 @@ export default function TitleSlide() {
         </div>
 
         {/* Ana Başlık ve Sağ Üst İkon */}
-        <div className="mt-8 relative w-full flex justify-between items-start">
-          <h1 className="text-[6.5vw] font-bold leading-[0.85] tracking-tighter w-[75%] transform scale-y-[1.15] origin-top-left">
+        <div className="mt-14 relative w-full flex justify-between items-start">
+          <h1 className="text-[7.5vw] font-black leading-[0.85] tracking-tighter w-[75%] transform scale-y-[1.15] origin-top-left">
             KNIME Workbench
             <br />
             Architecture
@@ -94,7 +94,7 @@ export default function TitleSlide() {
         </div>
 
         {/* KARTLAR BÖLÜMÜ */}
-        <div className=" w-full flex flex-col gap-6 pb-4 mt-24">
+        <div className=" w-full flex flex-col gap-6 pb-4 mt-36">
           {/* --- 1. SATIR: Turkuaz ve Krem Kartlar --- */}
           <div className="flex flex-row items-stretch gap-0 w-full">
             {/* Turkuaz Büyük Kart (Sol) */}

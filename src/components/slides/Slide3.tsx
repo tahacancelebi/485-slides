@@ -18,7 +18,7 @@ export default function OssOverviewSlide() {
 
       {/* 2. ANA SARI ÇEMBER */}
       <div className="absolute w-[100vh] h-[100vh] bg-[#F1A90B] rounded-full top-[50%] -translate-y-[50%] left-[18vh] shadow-[0_0_60px_rgba(0,0,0,0.3)] z-10 flex flex-col justify-center pl-[24vh]">
-        <h1 className="text-[#321142] font-black text-[14.5vh] -ms-12 leading-[0.8] tracking-tighter">
+        <h1 className="text-[#321142] font-black text-[12.5vh] -ms-12 leading-[0.8] tracking-tighter">
           KNIME
           <br />
           Workbench
