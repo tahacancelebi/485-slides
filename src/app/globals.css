@@ -1,1 +1,174 @@
 @import 'tailwindcss';
+@import '@xyflow/react/dist/base.css';
+
+/* ================================================== */
+/* React Flow — editorial palette overrides (Slide19) */
+/* ================================================== */
+.dep-flow .react-flow__renderer,
+.dep-flow .react-flow__pane {
+  background: transparent;
+}
+
+/* Base stroke — dark charcoal so it reads on the cream canvas */
+.dep-flow .react-flow__edge-path {
+  stroke: #2a1a1a;
+  stroke-opacity: 0.7;
+  stroke-width: 1.4px;
+}
+
+/* ≥100 — hub-to-hub / core couplings: glowing gold, animated */
+.dep-flow .react-flow__edge.weight-heavy .react-flow__edge-path {
+  stroke: #b85c38;
+  stroke-opacity: 1;
+  stroke-width: 2.8px;
+  filter: drop-shadow(0 0 5px rgba(184, 92, 56, 0.45));
+}
+
+/* 30-99 — significant coupling: solid charcoal */
+.dep-flow .react-flow__edge.weight-medium .react-flow__edge-path {
+  stroke: #2a1a1a;
+  stroke-opacity: 0.85;
+  stroke-width: 1.8px;
+}
+
+/* <30 — weak coupling: dashed charcoal */
+.dep-flow .react-flow__edge.weight-light .react-flow__edge-path {
+  stroke: #2a1a1a;
+  stroke-opacity: 0.55;
+  stroke-width: 1.2px;
+  stroke-dasharray: 5 4;
+}
+
+/* ========================================================= */
+/* CYCLIC DEPENDENCY — crimson pulse, overrides any weight  */
+/* ========================================================= */
+@keyframes dep-cycle-pulse {
+  0%,
+  100% {
+    stroke-opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(209, 59, 59, 0.55));
+  }
+  50% {
+    stroke-opacity: 0.78;
+    filter: drop-shadow(0 0 12px rgba(209, 59, 59, 0.95));
+  }
+}
+
+.dep-flow .react-flow__edge.is-cycle .react-flow__edge-path {
+  stroke: #d13b3b !important;
+  stroke-opacity: 1 !important;
+  stroke-width: 3.6px !important;
+  stroke-dasharray: 8 4 !important;
+  animation: dep-cycle-pulse 1.6s ease-in-out infinite;
+}
+
+.dep-flow .react-flow__edge.is-cycle .react-flow__arrowhead path,
+.dep-flow .react-flow__edge.is-cycle .react-flow__arrowhead polyline {
+  stroke: #d13b3b !important;
+  fill: #d13b3b !important;
+}
+
+.dep-flow .react-flow__edge.is-cycle .react-flow__edge-textbg {
+  fill: #d13b3b !important;
+  fill-opacity: 1 !important;
+}
+
+.dep-flow .react-flow__edge.is-cycle .react-flow__edge-text {
+  fill: #f4efe2 !important;
+  font-weight: 900 !important;
+  font-size: 10px !important;
+  letter-spacing: 0.06em !important;
+}
+
+.dep-flow .react-flow__edge-text {
+  font-size: 9px;
+  font-weight: 700;
+  fill: #2a1a1a;
+  letter-spacing: 0.02em;
+}
+
+.dep-flow .react-flow__edge-textbg {
+  fill: #f4efe2;
+  fill-opacity: 0.95;
+}
+
+.dep-flow .react-flow__arrowhead polyline,
+.dep-flow .react-flow__arrowhead path {
+  stroke: #2a1a1a;
+  fill: #2a1a1a;
+}
+
+.dep-flow .react-flow__edge.weight-heavy .react-flow__arrowhead path {
+  stroke: #b85c38;
+  fill: #b85c38;
+}
+
+.dep-flow .react-flow__handle {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dep-flow .react-flow__attribution {
+  display: none;
+}
+
+/* ========================================================= */
+/* Edge labels — rendered via EdgeLabelRenderer as DOM nodes  */
+/* in the overlay layer, so weight numbers are always ABOVE   */
+/* the node layer even when the bezier path crosses a node.   */
+/* ========================================================= */
+.dep-flow .dep-edge-label {
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+  z-index: 1001;
+}
+
+.dep-flow .dep-edge-label-light {
+  background: #f4efe2;
+  color: #2a1a1a;
+  opacity: 0.85;
+  border: 1px solid rgba(42, 26, 26, 0.35);
+}
+
+.dep-flow .dep-edge-label-medium {
+  background: #2a1a1a;
+  color: #f4efe2;
+  border: 1px solid #2a1a1a;
+}
+
+.dep-flow .dep-edge-label-heavy {
+  background: #b85c38;
+  color: #f4efe2;
+  border: 1px solid #8a3f23;
+  box-shadow: 0 0 8px rgba(184, 92, 56, 0.55);
+  font-weight: 900;
+}
+
+@keyframes dep-cycle-label-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 6px rgba(209, 59, 59, 0.55);
+    transform-origin: center;
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(209, 59, 59, 0.95);
+  }
+}
+
+.dep-flow .dep-edge-label-cycle {
+  background: #d13b3b;
+  color: #f4efe2;
+  border: 1.5px solid #f4efe2;
+  font-weight: 900;
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  padding: 3px 7px;
+  animation: dep-cycle-label-pulse 1.6s ease-in-out infinite;
+  z-index: 1002;
+}

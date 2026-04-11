@@ -145,7 +145,7 @@ Applied as CSS pseudo-elements or overlays on the slide container:
 - **Layout**: Hard Split
 - **Palette**: Coral + Navy + Yellow + Cream
 - **Left (coral)**: Section label "Product Overview" in Playfair italic. Giant "KNIME Workbench" headline — Clash Display, ~90px. "Graphical front-end (Eclipse RCP) for data analysis workflows" body text below.
-- **Right (navy)**: 3 stacked info cards with dark translucent background — Language: "Java (OOP)", Codebase: "97.66 KLOC" (in yellow), Classes: "672". Small "GNU GPL" badge at bottom.
+- **Right (navy)**: 3 stacked info cards with dark translucent background — Language: "Java (OOP)", Codebase: "100 KLOC" (in yellow), Classes: "672". Small "GNU GPL" badge at bottom.
 - **Decoratives**: Quote mark, em dash, slide number
 
 ### Slide 03: GQM Methodology

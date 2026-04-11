@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function MarketOpportunitySlide() {
+export default function TitleSlide() {
   const noiseStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
   };
@@ -30,25 +30,25 @@ export default function MarketOpportunitySlide() {
         <div className="flex justify-between items-start tracking-wide">
           <div className="flex items-center space-x-8">
             <span className="text-[#F5D95C] font-semibold text-lg">
-              Disqet Design
+              BBM485 · T1 Report
             </span>
             <span className="font-serif italic text-3xl tracking-wide">
-              Market Opportunity
+              Concrete Architecture
             </span>
           </div>
           <span className="text-[#F27A8A] font-bold text-2xl tracking-wider">
-            /(01-D1*)
+            /(01-T1*)
           </span>
         </div>
 
         {/* Ana Başlık ve Sağ Üst İkon */}
         <div className="mt-8 relative w-full flex justify-between items-start">
           <h1 className="text-[6.5vw] font-bold leading-[0.85] tracking-tighter w-[75%] transform scale-y-[1.15] origin-top-left">
-            The Global Digital
+            KNIME Workbench
             <br />
-            Marketing Market is
+            Architecture
             <br />
-            <span className="text-[#F27A8A]">Growing Rapidly.</span>
+            <span className="text-[#F27A8A]">Evaluation.</span>
           </h1>
 
           <div className="flex flex-col items-end text-right w-[25%] pt-4">
@@ -84,47 +84,43 @@ export default function MarketOpportunitySlide() {
               />
             </svg>
             <p className="text-sm md:text-base leading-snug text-white/90 font-medium">
-              Unprecedented Growth
+              Maintainability Analysis
               <br />
-              Driving New Opportunities
+              Via C&K And LOC Metrics
               <br />
-              For Brands Worldwide.
+              Software Architectures 2025–26.
             </p>
           </div>
         </div>
 
         {/* KARTLAR BÖLÜMÜ */}
         <div className=" w-full flex flex-col gap-6 pb-4 mt-24">
-          {/* --- 1. SATIR: Turkuaz ve Krem Kartlar (Yapışık ve Daha Kısa) --- */}
-          {/* gap-0 ile kartlar birbirine yapıştırıldı */}
+          {/* --- 1. SATIR: Turkuaz ve Krem Kartlar --- */}
           <div className="flex flex-row items-stretch gap-0 w-full">
             {/* Turkuaz Büyük Kart (Sol) */}
-            {/* py-8 px-10 yapılarak yükseklik azaltıldı */}
             <div className="bg-[#229297] rounded-[2rem] py-8 px-10 flex items-center justify-between shadow-2xl relative overflow-hidden flex-[2.7]">
               <div
                 className="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none"
                 style={noiseStyle}
               />
 
-              {/* Font boyutu text-[7.5vw]'den text-[6.5vw]'ye küçültüldü */}
               <div className="text-[6.5vw] font-bold tracking-tighter leading-none">
-                $786.2B<span className="text-[#F27A8A]">+</span>
+                100<span className="text-[#F27A8A]">K</span>
               </div>
               <div className="text-[1.6rem] md:text-[2rem] font-bold max-w-[280px] leading-[1.1]">
-                Global digital
+                Lines of Code
                 <br />
-                marketing spend
+                across 672 Java
                 <br />
-                is projected
+                classes analyzed
                 <br />
                 <span className="text-[#F5D95C] text-base mt-2 block font-bold">
-                  By 2026 (Statista)
+                  KNIME Workbench (GPL)
                 </span>
               </div>
             </div>
 
             {/* Krem Kart (Sağ) */}
-            {/* py-8 px-10 yapılarak turkuaz ile uyumlu şekilde küçültüldü */}
             <div className="bg-[#F4EFE2] rounded-[2rem] py-6 px-10 text-[#176E71] shadow-2xl relative overflow-hidden flex flex-col justify-between flex-[1.3]">
               <div
                 className="absolute inset-0 opacity-[0.08] mix-blend-multiply pointer-events-none"
@@ -147,17 +143,14 @@ export default function MarketOpportunitySlide() {
                 </svg>
               </div>
 
-              {/* Font boyutu text-[2.6rem]'den text-[2.2rem]'e çekildi */}
               <div className="text-[1.9rem] md:text-[2.2rem] font-medium leading-[1.15] tracking-tight mt-auto">
-                63% of
+                Static analysis
                 <br />
-                businesses
+                with SciTools
                 <br />
-                increased their
+                Understand, Python
                 <br />
-                digital marketing
-                <br />
-                budgets in 2024.
+                & SonarQube.
               </div>
             </div>
           </div>
@@ -170,21 +163,21 @@ export default function MarketOpportunitySlide() {
                 style={noiseStyle}
               />
               <div className="text-[3.2rem] font-bold tracking-tight">
-                11.5%
+                C&K
               </div>
               <div className="text-[1.1rem] font-medium leading-tight text-white/95">
-                Social media ad spending
+                Chidamber & Kemerer
                 <br />
-                is expected to grow.
+                metric suite applied.
               </div>
             </div>
 
             <div className="text-[1.05rem] leading-snug text-white/80 max-w-[480px] font-medium">
-              The Digital Marketing Landscape Is Expanding Faster
+              A Deep Architectural Audit Uncovering The
               <br />
-              Than Ever, Driven By The Global Shift Toward Online
+              Real Maintainability, Hidden God Classes,
               <br />
-              Engagement And Data-Driven Strategies.
+              And Technical Debt Concentrated In Hotspots.
             </div>
 
             <div className="ml-auto flex gap-3 pr-2">
@@ -192,9 +185,17 @@ export default function MarketOpportunitySlide() {
                 M
               </div>
               <div className="-ms-4 w-14 h-14 rounded-full bg-[#229297] flex items-center justify-center font-bold text-2xl shadow-xl">
-                E
+                T
+              </div>
+              <div className="-ms-4 w-14 h-14 rounded-full bg-[#F5D95C] flex items-center justify-center font-bold text-2xl shadow-xl text-[#176E71]">
+                S
               </div>
             </div>
+          </div>
+
+          {/* Team members line */}
+          <div className="text-white/75 text-sm font-medium tracking-wide mt-2">
+            Mert Ergün · Tahacan Çelebi · Serhat Akbulut
           </div>
         </div>
       </div>

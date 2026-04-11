@@ -5,7 +5,41 @@ import Slide1 from '@/components/slides/Slide1';
 import Slide2 from '@/components/slides/Slide2';
 import Slide3 from '@/components/slides/Slide3';
 import Slide4 from '@/components/slides/Slide4';
-const slides = [Slide1, Slide2, Slide3, Slide4];
+import Slide5 from '@/components/slides/Slide5';
+import Slide6 from '@/components/slides/Slide6';
+import Slide7 from '@/components/slides/Slide7';
+import Slide8 from '@/components/slides/Slide8';
+import Slide10 from '@/components/slides/Slide10';
+import Slide11 from '@/components/slides/Slide11';
+import Slide12 from '@/components/slides/Slide12';
+import Slide13 from '@/components/slides/Slide13';
+import Slide15 from '@/components/slides/Slide15';
+import Slide16 from '@/components/slides/Slide16';
+import Slide17 from '@/components/slides/Slide17';
+import Slide18 from '@/components/slides/Slide18';
+import Slide19 from '@/components/slides/Slide19';
+
+// Ordered to match content.md academic flow (17 slides).
+// Slide9 and Slide14 are intentionally excluded — their designs had no matching content slot.
+const slides = [
+  Slide1,  // 01 · Title
+  Slide3,  // 02 · OSS Overview
+  Slide6,  // 03 · GQM Methodology
+  Slide4,  // 04 · Tools Used
+  Slide10, // 05 · System Summary
+  Slide7,  // 06 · Q1 LOC
+  Slide5,  // 07 · Q2 CBO
+  Slide11, // 08 · Q3 WMC
+  Slide13, // 09 · Q3 RFC
+  Slide8,  // 10 · God Class Deep Dive
+  Slide2,  // 11 · Q4 LCOM
+  Slide17, // 12 · Q4 DIT & NOC
+  Slide19, // 13 · Dependency Graph
+  Slide18, // 14 · Cyclic Dependency
+  Slide15, // 15 · Overall Evaluation
+  Slide16, // 16 · Recommendations
+  Slide12, // 17 · Team Allocation & Q&A
+];
 
 export default function SlideShell() {
   const [current, setCurrent] = useState(0);
