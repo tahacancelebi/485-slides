@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import PresentationFrame from '@/components/shared/PresentationFrame';
 import Slide1 from '@/components/slides/Slide1';
 import Slide2 from '@/components/slides/Slide2';
@@ -44,19 +44,71 @@ const slides = [
 
 export default function SlideShell() {
   const [current, setCurrent] = useState(0);
+  const [prompterOpen, setPrompterOpen] = useState(false);
+  const channelRef = useRef<BroadcastChannel | null>(null);
+
+  const ignoreNextRef = useRef(false);
+
+  // Broadcast slide changes to teleprompter window & listen for changes from it
+  useEffect(() => {
+    const channel = new BroadcastChannel('knime-slides');
+    channelRef.current = channel;
+
+    channel.onmessage = (e) => {
+      if (e.data?.type === 'TELEPROMPTER_READY') {
+        channel.postMessage({ type: 'SLIDE_CHANGE', slideIndex: current });
+      }
+      // Teleprompter changed slide — sync back
+      if (e.data?.type === 'SLIDE_CHANGE' && e.data.source === 'teleprompter') {
+        if (ignoreNextRef.current) {
+          ignoreNextRef.current = false;
+          return;
+        }
+        setCurrent(e.data.slideIndex);
+      }
+    };
+
+    return () => channel.close();
+  }, [current]);
+
+  // Broadcast current slide index whenever it changes (from main window)
+  useEffect(() => {
+    channelRef.current?.postMessage({ type: 'SLIDE_CHANGE', slideIndex: current });
+  }, [current]);
 
   const go = useCallback((dir: 1 | -1) => {
     setCurrent((prev) => Math.max(0, Math.min(slides.length - 1, prev + dir)));
+  }, []);
+
+  const openTeleprompter = useCallback(() => {
+    const w = window.open(
+      '/teleprompter',
+      'knime-teleprompter',
+      'width=900,height=700,menubar=no,toolbar=no,location=no,status=no',
+    );
+    if (w) {
+      setPrompterOpen(true);
+      const check = setInterval(() => {
+        if (w.closed) {
+          setPrompterOpen(false);
+          clearInterval(check);
+        }
+      }, 1000);
+    }
   }, []);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') go(1);
       if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') go(-1);
+      // T key opens teleprompter
+      if ((e.key === 't' || e.key === 'T') && !e.metaKey && !e.ctrlKey) {
+        openTeleprompter();
+      }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [go]);
+  }, [go, openTeleprompter]);
 
   const CurrentSlide = slides[current];
 
@@ -65,6 +117,40 @@ export default function SlideShell() {
       <PresentationFrame>
         <CurrentSlide />
       </PresentationFrame>
+
+      {/* Teleprompter button — top right */}
+      <button
+        onClick={openTeleprompter}
+        title="Open Teleprompter (T)"
+        className={`fixed top-4 right-4 z-[100] flex items-center gap-2 px-3 py-2 rounded-lg transition-all text-sm font-semibold backdrop-blur-sm ${
+          prompterOpen
+            ? 'bg-red-500/30 text-red-200 border border-red-400/40 shadow-[0_0_12px_rgba(239,68,68,0.3)]'
+            : 'bg-black/30 text-white/70 hover:bg-black/50 hover:text-white border border-white/10'
+        }`}
+      >
+        {/* Teleprompter icon */}
+        <svg
+          className="w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+          />
+        </svg>
+        {prompterOpen ? (
+          <>
+            <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+            <span>LIVE</span>
+          </>
+        ) : (
+          <span>Notes</span>
+        )}
+      </button>
 
       {/* Slide indicator */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-[100]">
