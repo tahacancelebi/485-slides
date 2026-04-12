@@ -5,6 +5,53 @@ export interface SlideNote {
   en: string;
 }
 
+export interface SlidePalette {
+  bg: string;
+  accent: string;
+  glow: string;
+}
+
+/** Per-slide color palette — drives the teleprompter background. */
+export const SLIDE_PALETTES: SlidePalette[] = [
+  { bg: '#176E71', accent: '#F27A8A', glow: '#0F3D43' },   // 0  Title
+  { bg: '#2D0B38', accent: '#F1A90B', glow: '#870E9B' },   // 1  OSS
+  { bg: '#0B1A3A', accent: '#E8B83D', glow: '#E65C41' },   // 2  GQM
+  { bg: '#11162F', accent: '#6EE0A0', glow: '#E1F555' },   // 3  Tools
+  { bg: '#1A1A2E', accent: '#2C51F0', glow: '#E65C41' },   // 4  System Summary
+  { bg: '#1A3C2E', accent: '#E85D3A', glow: '#D4A843' },   // 5  LOC
+  { bg: '#1C1814', accent: '#C0522C', glow: '#E8B83D' },   // 6  CBO
+  { bg: '#2D0B38', accent: '#E8B83D', glow: '#6112C8' },   // 7  WMC
+  { bg: '#2955D4', accent: '#F9D74A', glow: '#1A2A6C' },   // 8  RFC
+  { bg: '#1A0B0B', accent: '#B8322B', glow: '#677926' },   // 9  God Class
+  { bg: '#E65C41', accent: '#1A1A2E', glow: '#A63C28' },   // 10 LCOM
+  { bg: '#3D4F2F', accent: '#B8D44E', glow: '#1A2E14' },   // 11 DIT & NOC
+  { bg: '#B85C38', accent: '#E8B83D', glow: '#1A1A2E' },   // 12 Dependency Graph
+  { bg: '#2E1610', accent: '#E8B83D', glow: '#E65C41' },   // 13 Cyclic Dep.
+  { bg: '#C49A2D', accent: '#2D1A0A', glow: '#8A6A1A' },   // 14 Overall
+  { bg: '#1A1A2E', accent: '#6B3FA0', glow: '#F4EFE2' },   // 15 Recommendations
+  { bg: '#1A1A2E', accent: '#E65C41', glow: '#2C51F0' },   // 16 Team
+];
+
+export const SLIDE_LABELS = [
+  'Title',
+  'OSS Overview',
+  'GQM Tree',
+  'Tools Used',
+  'System Summary',
+  'Q1 · LOC',
+  'Q2 · CBO',
+  'Q3 · WMC',
+  'Q3 · RFC',
+  'God Classes',
+  'Q4 · LCOM',
+  'Q4 · DIT & NOC',
+  'Dep. Graph',
+  'Cyclic Dep.',
+  'Overall',
+  'Recommendations',
+  'Team & Q&A',
+];
+
 /**
  * Speaker notes for all 17 slides, keyed by slide index (0-based).
  * Each note has Turkish and English versions.

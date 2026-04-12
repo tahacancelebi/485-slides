@@ -20,8 +20,6 @@ import Slide17 from '@/components/slides/Slide17';
 import Slide18 from '@/components/slides/Slide18';
 import Slide19 from '@/components/slides/Slide19';
 
-// Ordered to match content.md academic flow (17 slides).
-// Slide9 and Slide14 are intentionally excluded — their designs had no matching content slot.
 const slides = [
   Slide1,  // 01 · Title
   Slide3,  // 02 · OSS Overview
@@ -44,71 +42,86 @@ const slides = [
 
 export default function SlideShell() {
   const [current, setCurrent] = useState(0);
-  const [prompterOpen, setPrompterOpen] = useState(false);
   const channelRef = useRef<BroadcastChannel | null>(null);
+  const prompterRef = useRef<Window | null>(null);
 
-  const ignoreNextRef = useRef(false);
-
-  // Broadcast slide changes to teleprompter window & listen for changes from it
+  // ─── BroadcastChannel: bidirectional sync ───────────────
   useEffect(() => {
-    const channel = new BroadcastChannel('knime-slides');
-    channelRef.current = channel;
+    const ch = new BroadcastChannel('knime-slides');
+    channelRef.current = ch;
 
-    channel.onmessage = (e) => {
+    ch.onmessage = (e) => {
       if (e.data?.type === 'TELEPROMPTER_READY') {
-        channel.postMessage({ type: 'SLIDE_CHANGE', slideIndex: current });
+        ch.postMessage({ type: 'SLIDE_CHANGE', slideIndex: current });
       }
-      // Teleprompter changed slide — sync back
       if (e.data?.type === 'SLIDE_CHANGE' && e.data.source === 'teleprompter') {
-        if (ignoreNextRef.current) {
-          ignoreNextRef.current = false;
-          return;
-        }
         setCurrent(e.data.slideIndex);
       }
     };
 
-    return () => channel.close();
+    return () => ch.close();
   }, [current]);
 
-  // Broadcast current slide index whenever it changes (from main window)
   useEffect(() => {
     channelRef.current?.postMessage({ type: 'SLIDE_CHANGE', slideIndex: current });
   }, [current]);
 
+  // ─── Navigation ─────────────────────────────────────────
   const go = useCallback((dir: 1 | -1) => {
     setCurrent((prev) => Math.max(0, Math.min(slides.length - 1, prev + dir)));
   }, []);
 
-  const openTeleprompter = useCallback(() => {
+  // ─── Presenter mode: position slide window + open teleprompter ───
+  const openPresenterMode = useCallback(() => {
+    const sw = window.screen.availWidth;
+    const sh = window.screen.availHeight;
+    const sl = (window.screen as unknown as Record<string, number>).availLeft ?? 0;
+    const st = (window.screen as unknown as Record<string, number>).availTop ?? 0;
+
+    // Slides: 16:9 fit to screen height, pinned left
+    const slideH = sh;
+    const slideW = Math.round(slideH * (16 / 9));
+    const finalSlideW = Math.min(slideW, Math.round(sw * 0.7));
+
+    // Teleprompter: remaining right portion, full height
+    const prompterW = sw - finalSlideW;
+    const prompterL = sl + finalSlideW;
+
+    // Try to reposition main window (may be blocked by browser)
+    try { window.moveTo(sl, st); window.resizeTo(finalSlideW, sh); } catch { /* noop */ }
+
+    // Open (or focus) teleprompter popup
+    if (prompterRef.current && !prompterRef.current.closed) {
+      try {
+        prompterRef.current.moveTo(prompterL, st);
+        prompterRef.current.resizeTo(prompterW, sh);
+        prompterRef.current.focus();
+      } catch { /* noop */ }
+      return;
+    }
+
     const w = window.open(
       '/teleprompter',
       'knime-teleprompter',
-      'width=900,height=700,menubar=no,toolbar=no,location=no,status=no',
+      `left=${prompterL},top=${st},width=${prompterW},height=${sh},menubar=no,toolbar=no,location=no,status=no`,
     );
-    if (w) {
-      setPrompterOpen(true);
-      const check = setInterval(() => {
-        if (w.closed) {
-          setPrompterOpen(false);
-          clearInterval(check);
-        }
-      }, 1000);
-    }
+    if (w) prompterRef.current = w;
   }, []);
 
+  // ─── Keyboard ───────────────────────────────────────────
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') go(1);
       if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') go(-1);
-      // T key opens teleprompter
-      if ((e.key === 't' || e.key === 'T') && !e.metaKey && !e.ctrlKey) {
-        openTeleprompter();
+
+      // N → presenter mode (Cmd/Ctrl+N is browser "new window", so plain N is safe)
+      if ((e.key === 'n' || e.key === 'N') && !e.metaKey && !e.ctrlKey) {
+        openPresenterMode();
       }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [go, openTeleprompter]);
+  }, [go, openPresenterMode]);
 
   const CurrentSlide = slides[current];
 
@@ -117,40 +130,6 @@ export default function SlideShell() {
       <PresentationFrame>
         <CurrentSlide />
       </PresentationFrame>
-
-      {/* Teleprompter button — top right */}
-      <button
-        onClick={openTeleprompter}
-        title="Open Teleprompter (T)"
-        className={`fixed top-4 right-4 z-[100] flex items-center gap-2 px-3 py-2 rounded-lg transition-all text-sm font-semibold backdrop-blur-sm ${
-          prompterOpen
-            ? 'bg-red-500/30 text-red-200 border border-red-400/40 shadow-[0_0_12px_rgba(239,68,68,0.3)]'
-            : 'bg-black/30 text-white/70 hover:bg-black/50 hover:text-white border border-white/10'
-        }`}
-      >
-        {/* Teleprompter icon */}
-        <svg
-          className="w-4 h-4"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
-          />
-        </svg>
-        {prompterOpen ? (
-          <>
-            <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-            <span>LIVE</span>
-          </>
-        ) : (
-          <span>Notes</span>
-        )}
-      </button>
 
       {/* Slide indicator */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-[100]">
@@ -171,18 +150,8 @@ export default function SlideShell() {
           onClick={() => go(-1)}
           className="fixed left-4 top-1/2 -translate-y-1/2 z-[100] w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white transition-colors"
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
-            />
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
           </svg>
         </button>
       )}
@@ -191,18 +160,8 @@ export default function SlideShell() {
           onClick={() => go(1)}
           className="fixed right-4 top-1/2 -translate-y-1/2 z-[100] w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white transition-colors"
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
         </button>
       )}
