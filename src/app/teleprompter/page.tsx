@@ -27,7 +27,7 @@ const jetbrains = JetBrains_Mono({
 const METRIC_RE = /\b(CBO|WMC|RFC|LOC|DIT|NOC|LCOM|GQM|IQR|TDD|OSS|GPL|C&K|Q[1-4])\b/g;
 const NUMBER_RE = /\b(\d[\d.,]*\s*(?:%|K|k|M)?)(?!\w)/g;
 const CLASSNAME_RE = /\b(WorkflowEditor|NodeContainerEditPart|Nodalizer|StyledTextEditor|AbstractNodeAction|AbstractContentProvider|AbstractRepositoryView|SubnodeLayoutJSONEditorPage|AbstractKNIMECommand|AbstractEditorAction|ExplorerView)\b/g;
-const GODCLASS_RE = /\b(God\s+Class(?:es)?|Tanr[ıi]\s+Sinif(?:lar[ıi])?)\b/gi;
+const GODCLASS_RE = /\b(God\s+Class(?:es)?|Tanrı\s+Sınıf(?:lar)?|Tanri\s+Sinif(?:lar)?)\b/gi;
 
 interface Chunk { type: 'text' | 'metric' | 'number' | 'classname' | 'god'; content: string }
 
