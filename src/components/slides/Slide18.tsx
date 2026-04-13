@@ -22,10 +22,10 @@ export default function CyclicDependencySlide() {
         Architectural Smell
       </div>
       <div className="absolute top-[5.5cqh] left-[30cqw] text-[#E65C41] font-medium text-[1.8cqh] tracking-wide z-20">
-        BBM485 · T1
+        BBM485 · G05
       </div>
       <div className="absolute top-[5cqh] right-[4cqw] text-[#E8B83D] font-bold text-[2.2cqh] tracking-widest z-20">
-        /(14-T1*)
+        /(14-D1*
       </div>
 
       {/* === MAIN HEADING — Upper left === */}

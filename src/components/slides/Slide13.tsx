@@ -22,7 +22,7 @@ export default function RFCSlide() {
         Q3 · Behavioral Complexity (RFC)
       </div>
       <div className="absolute top-[5.5cqh] left-[38cqw] text-[#F4EFE2]/60 font-medium text-[1.8cqh] tracking-wide z-20">
-        BBM485 · T2
+        BBM485 · G05
       </div>
       <div className="absolute top-[5cqh] right-[4cqw] text-[#F9D74A] font-bold text-[2.2cqh] tracking-widest z-20">
         /(09-D1*)

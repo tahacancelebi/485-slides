@@ -12,7 +12,7 @@ export default function DependencyGraphSlide() {
         Concrete Architecture
       </div>
       <div className="absolute top-[5.5cqh] left-[32cqw] text-[#F4EFE2]/40 font-medium text-[1.8cqh] tracking-wide z-30">
-        BBM485 · T2
+        BBM485 · G05
       </div>
       <div className="absolute top-[5cqh] right-[5cqw] text-[#E8B83D] font-bold text-[2.2cqh] tracking-widest z-30">
         /(13-D1*)

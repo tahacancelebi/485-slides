@@ -49,10 +49,10 @@ export default function GodClassSlide() {
         Deep Dive · Anti-Pattern
       </div>
       <div className="absolute top-[5.5cqh] left-[30cqw] text-[#677926] font-medium text-[1.8cqh] tracking-wide z-20">
-        BBM485 · T1
+        BBM485 · G05
       </div>
       <div className="absolute top-[5cqh] right-[4cqw] text-[#1A0B0B] font-bold text-[2.2cqh] tracking-widest z-20">
-        /(10-T1*)
+        /(10-D1*
       </div>
 
       {/* === MAIN HEADING — Upper right === */}

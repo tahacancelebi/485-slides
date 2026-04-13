@@ -12,7 +12,7 @@ export default function InheritanceSlide() {
         Q4 · Inheritance (DIT &amp; NOC)
       </div>
       <div className="absolute top-[5.5cqh] left-[36cqw] text-[#B8D44E]/60 font-medium text-[1.8cqh] tracking-wide z-30">
-        BBM485 · T2
+        BBM485 · G05
       </div>
       <div className="absolute top-[5cqh] right-[4cqw] text-[#E8B83D] font-bold text-[2.2cqh] tracking-widest z-30">
         /(12-D1*)

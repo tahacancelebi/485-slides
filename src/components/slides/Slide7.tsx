@@ -23,7 +23,7 @@ export default function LOCSlide() {
         Q1 · Code Size (LOC)
       </div>
       <div className="absolute top-[5.5cqh] right-[22cqw] text-[#D4A843] font-medium text-[1.8cqh] tracking-wide z-20">
-        BBM485 · T2
+        BBM485 · G05
       </div>
       <div className="absolute top-[5cqh] right-[4cqw] text-[#E85D3A] font-bold text-[2.2cqh] tracking-widest z-20">
         /(06-D1*)

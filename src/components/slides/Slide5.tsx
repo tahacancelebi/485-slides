@@ -74,7 +74,7 @@ export default function CBOSlide() {
         Q2 · Coupling (CBO)
       </div>
       <div className="absolute top-[5.5cqh] left-[28cqw] text-[#DAA520] font-medium text-[1.8cqh] tracking-wide z-20">
-        BBM485 · T2
+        BBM485 · G05
       </div>
       <div className="absolute top-[5cqh] right-[4cqw] text-[#C0522C] font-bold text-[2.2cqh] tracking-widest z-20">
         /(07-D1*)

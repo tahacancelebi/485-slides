@@ -24,7 +24,7 @@ export default function OverallEvaluationSlide() {
         Overall Evaluation
       </div>
       <div className="absolute top-[5.5cqh] left-[30cqw] text-[#2D1A0A]/60 font-medium text-[1.8cqh] tracking-wide z-20">
-        BBM485 · T2
+        BBM485 · G05
       </div>
       <div className="absolute top-[5cqh] right-[4cqw] text-[#2D1A0A] font-bold text-[2.2cqh] tracking-widest z-20">
         /(15-D1*)

@@ -29,10 +29,10 @@ export default function WMCSlide() {
         Q3 · Structural Complexity (WMC)
       </div>
       <div className="absolute top-[5.5cqh] left-[36cqw] text-[#E65C41] font-medium text-[1.8cqh] tracking-wide z-20">
-        BBM485 · T1
+        BBM485 · G05
       </div>
       <div className="absolute top-[5cqh] right-[4cqw] text-[#E8B83D] font-bold text-[2.2cqh] tracking-widest z-20">
-        /(08-T1*)
+        /(08-D1*
       </div>
 
       {/* === MAIN HEADING — Upper left === */}

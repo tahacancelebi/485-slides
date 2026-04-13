@@ -31,7 +31,7 @@ export default function TitleSlide() {
         <div className="flex justify-between items-start tracking-wide">
           <div className="flex items-center space-x-8">
             <span className="text-[#F5D95C] font-semibold text-lg">
-              BBM485 · T2 Report
+              BBM485 · G05 Report
             </span>
             <span className="font-serif italic text-3xl tracking-wide">
               Concrete Architecture
