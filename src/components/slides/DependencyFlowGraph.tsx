@@ -490,7 +490,7 @@ export default function DependencyFlowGraph() {
   };
 
   return (
-    <div className="dep-flow w-full h-full">
+    <div className="dep-flow w-full h-full relative">
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -500,13 +500,14 @@ export default function DependencyFlowGraph() {
         fitView
         fitViewOptions={{ padding: 0.14 }}
         minZoom={0.25}
-        maxZoom={1.5}
+        maxZoom={2.5}
         nodesDraggable={false}
         nodesConnectable={false}
         elementsSelectable={false}
-        panOnDrag={false}
-        zoomOnScroll={false}
-        zoomOnPinch={false}
+        panOnDrag={true}
+        panOnScroll={true}
+        zoomOnScroll={true}
+        zoomOnPinch={true}
         zoomOnDoubleClick={false}
         preventScrolling={false}
         proOptions={{ hideAttribution: true }}
