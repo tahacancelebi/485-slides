@@ -130,41 +130,6 @@ export default function SlideShell() {
       <PresentationFrame>
         <CurrentSlide />
       </PresentationFrame>
-
-      {/* Slide indicator */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-[100]">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-2.5 h-2.5 rounded-full transition-all ${
-              i === current ? 'bg-white scale-125' : 'bg-white/40'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Arrow buttons for mouse users */}
-      {current > 0 && (
-        <button
-          onClick={() => go(-1)}
-          className="fixed left-4 top-1/2 -translate-y-1/2 z-[100] w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white transition-colors"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
-      )}
-      {current < slides.length - 1 && (
-        <button
-          onClick={() => go(1)}
-          className="fixed right-4 top-1/2 -translate-y-1/2 z-[100] w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white transition-colors"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
-      )}
     </div>
   );
 }
