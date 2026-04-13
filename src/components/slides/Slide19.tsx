@@ -90,7 +90,7 @@ export default function DependencyGraphSlide() {
           />
 
           {/* actual react-flow graph */}
-          <div className="absolute top-[4.6cqh] left-[1cqh] right-[1cqh] bottom-[10cqh]">
+          <div className="absolute top-[4.6cqh] left-[1cqh] right-[1cqh] bottom-[10cqh] h-full">
             <DependencyFlowGraph />
           </div>
 

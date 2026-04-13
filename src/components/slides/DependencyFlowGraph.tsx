@@ -505,13 +505,14 @@ export default function DependencyFlowGraph() {
         nodesConnectable={false}
         elementsSelectable={false}
         panOnDrag={true}
-        panOnScroll={true}
+        panOnScroll={false}
         zoomOnScroll={true}
         zoomOnPinch={true}
         zoomOnDoubleClick={false}
-        preventScrolling={false}
+        preventScrolling={true}
         proOptions={{ hideAttribution: true }}
       />
+
     </div>
   );
 }
